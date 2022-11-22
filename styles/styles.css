@@ -232,4 +232,7 @@ html {
 @font-face {
   font-family: dizhitlBold;
   src: url(../assets/fonts/dizhitl/dizhitl-bold.ttf);
+}
+.mobileHidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
