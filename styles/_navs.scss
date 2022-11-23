@@ -45,10 +45,7 @@ nav{
 
 .logo{
     @include ristan;
-    position:absolute;
-    top:-65px;
-    left:50%;
-    transform:translateX(-50%);
+    margin:0 auto;
 }
 
 .desktopNav{

@@ -233,12 +233,26 @@ html {
   font-family: dizhitlBold;
   src: url(../assets/fonts/dizhitl/dizhitl-bold.ttf);
 }
+.wrapper {
+  margin: 0 auto;
+  max-width: 1620px;
+  width: 80%;
+}
+
 body {
   background-color: #000000;
 }
 
+.bgSecondary {
+  background-color: #1e1e1e;
+}
+
 .mobileHidden {
   display: none;
+}
+
+img {
+  width: 100%;
 }
 
 [src$=".svg"] {
@@ -249,6 +263,11 @@ body {
 [src$="reactLeaflet.svg"] {
   height: 100px;
   width: 100px;
+}
+
+p {
+  font-family: dizhitl;
+  color: #ffffff;
 }
 
 nav {
@@ -290,7 +309,7 @@ nav {
 }
 
 .logo span {
-  color: #49b618;
+  color: #49b517;
   font-size: clamp(2.25rem, 2.15rem + 0.5vw, 2.75rem);
 }
 
@@ -299,10 +318,7 @@ nav {
   font-family: dizhitl;
   text-align: center;
   font-size: clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem);
-  position: absolute;
-  top: -65px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 .desktopNav {
@@ -333,9 +349,52 @@ nav {
 }
 
 .desktopNav a:hover {
-  color: #49b618;
+  color: #49b517;
 }
 
 .desktopNav.active {
   left: 0;
+}
+
+header {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: dizhitl;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20%;
+}
+h1 span {
+  color: #49b517;
+}
+
+h2 {
+  font-family: dizhitl;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.headshot {
+  border-radius: 25px;
+  display: block;
+  margin: 20% auto 5%;
+  transform: rotate(45deg);
+  overflow: hidden;
+  width: 60vw;
+  box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
+  -webkit-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
+  -moz-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
+}
+
+.headshot img {
+  max-width: 100%;
+  transform: rotate(-45deg);
+  scale: 1.42;
 }/*# sourceMappingURL=styles.css.map */

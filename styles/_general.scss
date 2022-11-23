@@ -1,12 +1,26 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+.wrapper{
+    margin:0 auto;
+    max-width:1620px;
+    width:80%;
+}
+
 body{
     background-color:$bgPrimary;
 }
 
+.bgSecondary{
+    background-color:$bgSecondary;
+}
+
 .mobileHidden{
     display:none;
+}
+
+img{
+    width:100%;
 }
 
 [src$='.svg']{
@@ -17,4 +31,9 @@ body{
 [src$='reactLeaflet.svg']{
     height:100px;
     width:100px;
+}
+
+p{
+    font-family:dizhitl;
+    color:$textPrimary;
 }

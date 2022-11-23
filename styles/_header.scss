@@ -1,2 +1,39 @@
 @use './variables' as *;
 @use './mixins' as *;
+
+header{
+    background-color:$bgPrimary;
+    @include flexColCen;
+}
+h1{
+    @include fontBasics;
+    text-align: center;
+    margin-top:20%;
+
+    span{
+        color:$accentColor;
+    }
+}
+
+h2{
+    @include fontBasics;
+    text-align: center;
+}
+
+.headshot{
+    border-radius:25px;
+    display:block;
+    margin:20% auto 5%;
+    transform: rotate(45deg);
+    overflow:hidden;
+    width:60vw;
+    box-shadow: 10px -10px 9px 0px rgba(73, 181, 23,0.75);
+    -webkit-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23,0.75);
+    -moz-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23,0.75);
+}
+
+.headshot img{
+    max-width: 100%;
+    transform:rotate(-45deg);
+    scale:1.42;
+}
