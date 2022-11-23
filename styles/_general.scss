@@ -1,0 +1,20 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body{
+    background-color:$bgPrimary;
+}
+
+.mobileHidden{
+    display:none;
+}
+
+[src$='.svg']{
+    height:20px;
+    width:20px;
+}
+
+[src$='reactLeaflet.svg']{
+    height:100px;
+    width:100px;
+}

@@ -13,42 +13,40 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header>
+    <nav>
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        <div>
-            <h3><span>T</span>ristan</h3>
-        </div>
-        <nav>
+        <h3 class="logo"><span>T</span>ristan</h3>
+        <div class="desktopNav">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="navLink">Home</a></li>
+                <li><a href="#about" class="navLink">About</a></li>
+                <li><a href="#projects" class="navLink">Projects</a></li>
+                <li><a href="#contact" class="navLink">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <main>
         <!-- Landing Section -->
-        <section>
+        <header>
             <div>
                 <h1>Hello, I'm Tristan</h1>
                 <h2>Front End Web Developer</h2>
             </div>
             <div>
-                <img src="./assets/images/headshot.jpg" alt="head shot image of Tristan Thorburn">
+                <img src="./assets/images/headshot.webp" alt="head shot image of Tristan Thorburn">
             </div>
-        </section>
+        </header>
         <!-- About Me Section -->
         <section>
             <div class="mobileHidden">
-                <img src="./assets/images/headshotTwo.jpg" alt="Photo of Tristan">
+                <img src="./assets/images/headshotTwo.webp" alt="Photo of Tristan">
             </div>
             <div>
-                <h2>An Introduction About Me</h2>
+                <h2 id="about">An Introduction About Me</h2>
                 <p>I am a front end developer who enjoys the challenge of translating the ideas and design of a project to a working and accessible site. Prior to entering the tech field I worked in the hospitality industry for 12 years.</p>
                 <br>
                 <p>Now, I am a recent graduate of Juno College's Web Development Bootcamp. My time at Juno gave me the opportunity to hone skills in HTML5, CSS3, Javascript, React and Firebase. I was able to practice these skills with several projects which were both individual and team work based.</p>
@@ -62,25 +60,258 @@
                             <i class="fa-brands fa-github" alt="link to github profile"></i></a>
                     </li>
                     <li>
-                        <a href="#resume" alt="link to resume"><i class="fa-solid fa-file"></i></a>
+                        <a href="tristan-FE-resume.docx.pdf"><i class="fa-solid fa-file" alt="link to resume"></i></a>
                     </li>
+                    <li>
+                        <a href="https://open.spotify.com/user/0znxe53bbye155co7tvc5rzec?si=5c89fb7533234c66"><i class="fa-brands fa-spotify" alt="link to spotify profile"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://steamcommunity.com/profiles/76561198061338051/"><i class="fa-brands fa-steam" alt="link to steam profile"></i></a>
+                    </li>
+                </ul>
             </div>
         </section>
         <!-- Tech Stack Section********************************** -->
         <section>
-
+            <ul>
+                <li><i class="fa-brands fa-html5" alt="html5 icon"></i></li>
+                <li><i class="fa-brands fa-css3-alt" alt="css3 icon"></i></li>
+                <li><i class="fa-brands fa-sass" alt="sass icon"></i></li>
+                <li><i class="fa-brands fa-square-js" alt="javascript icon"></i></li>
+                <li><i class="fa-brands fa-react" alt="react icon"></i></li>
+                <li><img src="./assets/svg/firebaseIcon.svg" alt="firebase icon"></li>
+                <li><img src="./assets/svg/accessibilityIcon.svg" alt="accessibility icon"></li>
+                <li><img src="./assets/svg/restApiIcon.svg" alt="rest api icon"></li>
+                <li><img src="./assets/svg/responsiveIcon.svg" alt="responsive web design icon"></li>
+                <li><img src="./assets/svg/vscodeIcon.svg" alt="vs code icon"></li>                
+                <li><i class="fa-solid fa-people-group" alt="group work icon"></i></li>
+            </ul>
         </section>
         <!-- Projects Section -->
-        <section>
+        <section id="projects" class="projects">
+            <h2 class="collection">Project Collection</h2>
 
+            <button class="carousel-off slide-left">Previous</button>
+
+            <div class="project-slider">
+                <div class="slide"><!--PROJECT 1------------------------------------------------------>
+                    <div class = "project-container">
+                        <div class="project-card">
+                            <img src="./assets/images/barMenuHelper.webp" alt="Bar Menu Helper project image">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="project-links">
+                            <p><a href="https://charming-semifreddo-5a86c8.netlify.app/">
+                                <i class="fa-solid fa-laptop" alt="live site icon"></i>Live</a></p>
+                            <p><a href="https://github.com/TristanThorburn/juno-proj-3">
+                                <i class="fa-solid fa-code" alt="code link icon "></i></i>Repo</a></p>
+                        </div>
+                        <h3>Bar Menu Helper</h3>
+                        <p>About:
+                        <br>
+                        Bar Menu Helper is a multi component React application based on Axios for API calls, utilizing useState and useEffect hooks for functionality as well as practicing the use of passing props through components. </p>
+                        <ul>
+                            <li><i class="fa-brands fa-react" alt="react icon"></i></li>
+                            <li><img src="./assets/svg/restApiIcon.svg" alt="rest api icon"></li>
+                            <li><img src="./assets/svg/responsiveIcon.svg" alt="responsive design icon"></li>
+                            <li><i class="fa-brands fa-sass" alt="sass icon"></i></li>
+                        </ul>
+                        <!-- <p class="carousel-off end-desc">Tech used / Difficulties / Solutions (Desktop)--To be updated</p> -->
+                    </div>
+                </div>
+
+                <div class="slide"><!--PROJECT 2-->
+                    <div class = "project-container" tabindex="0">
+                        <div class="project-card">
+                            <img src="./assets/images/tremors.webp" alt="Tremors project image">
+                        </div>
+                    </div>
+                    <div class="wrapper description">
+                        <div class="project-links">
+                            <p><a href="https://beamish-stardust-41358a.netlify.app/">
+                                <i class="fa-solid fa-laptop" alt="live site icon"></i>Live</a></p>
+                            <p><a href="https://github.com/shaishav007/tremorsV1">
+                                <i class="fa-solid fa-code" alt="code link icon"></i></i>Repo</a></p>
+                        </div>
+                        <h3>Tremors</h3>
+                        <p>Project Partners: 
+                            <a href="https://github.com/shaishav007">Shaishav Vashi</a>&nbspand 
+                            <a href="https://github.com/dildeepgill">Dildeep Gill</a></p>
+                        <p>About:
+                        <br>
+                        The final group project from our Juno College Bootcamp. Our task was to create a react app that calls API data for earth quakes and then stores it on firebase, based on magnitude. We utilized several npm installs including react leaflet to generate a map, spinners react and react typewriter effect to add styling. As our original API did not allow for location searches we included a stretch goal, refactoring the API call to chain two into a final call that would generate on the map.
+                        </p>
+                        <ul>
+                            <li><i class="fa-brands fa-react" alt="react icon"></i></li>
+                            <li><img src="./assets/svg/firebaseIcon.svg" alt="firebase icon"></li>
+                            <li><img src="./assets/svg/restApiIcon.svg" alt="rest api icon"></li>
+                            <li><i class="fa-brands fa-npm" alt="npm icon"></i></li>
+                            <li><img src="./assets/svg/reactLeaflet.svg" alt="react leaflet icon"></li>
+                            <li><i class="fa-solid fa-people-group" alt="group work icon"></i></li>
+                        </ul>
+                        <!-- <p class="carousel-off end-desc">Tech used / Difficulties / Solutions (Desktop)--To be updated</p> -->
+                    </div>
+                </div>
+
+                <div class="project-slider">
+                    <div class="slide"><!--PROJECT 3-->
+                        <div class = "project-container">
+                            <div class="project-card">
+                                <img src="./assets/images/js-sommelier.webp" alt="Javascript Sommelier project image">
+                            </div>
+                        </div>
+                        <div class="wrapper description">
+                            <div class="project-links">
+                                <p><a href="https://darling-malasada-522ed5.netlify.app/">
+                                    <i class="fa-solid fa-laptop" alt="live site icon"></i>Live</a></p>
+                                <p><a href="https://github.com/Juno-group-proj-two/paul-matt-trist-proj-2">
+                                    <i class="fa-solid fa-code" alt="code link icon "></i></i>Repo</a></p>
+                            </div>
+                            <h3>Javascript Sommelier</h3>
+                            <p>Project Partners: 
+                                <a href="https://github.com/myboyblue519">Mattew Van Luxemborg</a>&nbspand 
+                                <a href="https://github.com/PPableo">Paul Pableo</a></p>
+                            <p>About:
+                            <br>
+                            This project was an opportunity to work with API calls in vanilla javascript. Our orignal MVP was to create an API call to pair a meal with a varietal of wine chosen via drop down menu. We were able to further expand the project to include a second API call to pair a wine to a food from a typed text input.</p>
+                            <ul>
+                                <li><i class="fa-brands fa-square-js" alt="javascript icon"></i></li>
+                                <li><img src="./assets/svg/restApiIcon.svg" alt="rest api icon"></li>
+                                <li><i class="fa-brands fa-html5" alt="html5 icon"></i></li>
+                                <li><i class="fa-brands fa-sass" alt="sass icon"></i></li>
+                                <li><i class="fa-brands fa-css3-alt" alt="css3 icon"></i></li>
+                                <li><img src="./assets/svg/responsiveIcon.svg" alt="responsive design icon"></li>
+                                <li><i class="fa-solid fa-people-group" alt="group work icon"></i></li>
+                            </ul>
+                            <!-- <p class="carousel-off end-desc">Tech used / Difficulties / Solutions (Desktop)--To be updated</p> -->
+                        </div>
+                    </div>
+
+                <div class="slide"><!--PROJECT 4-->
+                    <div class = "project-container" tabindex="0">
+                        <div class="project-card">
+                            <img src="./assets/images/under-the-sea.webp" alt="Under the Sea project image, click for details">
+                        </div>
+                    </div>
+                    <div class="wrapper description">
+                        <div class="project-links">
+                            <p><a href="https://zesty-moonbeam-ee59a1.netlify.app/">
+                                <i class="fa-solid fa-laptop" alt="live site icon"></i>Live</a></p>
+                            <p><a href="https://github.com/TristanThorburn/project-one/tree/my-feature-branch">
+                                <i class="fa-solid fa-code" alt="code link icon"></i></i>Repo</a></p>
+                        </div>
+                        <h3>Under the sea</h3>
+                        <p>About:
+                        <br>
+                        This project provided experience using Javascript to manipulate the DOM in order to create a functioning hamburger menu and image carousel on mobile screens on a feature brain. On the main starting branch, the focus was creating a multi-page website from a design with implementation of media queries for functionality on multiple screen sizes. During this project I used a mobile first design strategy, and manual drawing as no mobile design was provided.
+                        </p>
+                        <ul>
+                            <li><i class="fa-brands fa-square-js" alt="javascript icon"></i></li>
+                            <li><i class="fa-brands fa-html5" alt="html5 icon"></i></li>
+                            <li><i class="fa-brands fa-sass" alt="sass icon"></i></li>
+                            <li><i class="fa-brands fa-css3-alt" alt="css3 icon"></i></li>
+                            <li><img src="./assets/svg/accessibilityIcon.svg" alt="accessibility icon"></li>
+                            <li><img src="./assets/svg/responsiveIcon.svg" alt="responsive design icon"></li>
+                        </ul>
+                        <!-- <p class="carousel-off end-desc">Tech used / Difficulties / Solutions (Desktop)--To be updated</p> -->
+                    </div>
+                </div>
+
+                <div class="eggy slide">
+                    <div class="desk-egg">
+                        <img src="./assets/images/easter-egg-project.webp" alt="3 Day old developer project image">
+                    </div>
+                    <div class="wrapper">
+                        <div class="project-links">
+                            <p><a href="https://fabulous-sunflower-130abe.netlify.app/">
+                                    <i class="fa-solid fa-laptop" alt="live site icon"></i>Live</a></p>
+                            <p><a href="https://github.com/TristanThorburn/3-days-of-intro-to-web-dev">
+                                    <i class="fa-solid fa-code" alt="code link icon"></i></i>Repo</a></p>
+                        </div>
+                        <h3>3 days later</h3>
+                        <p class="end-desc">Wait a minute, how did you find this! I only knew 3 days of HTML and CSS, this shouldn't be here at all!
+                        <br>
+                        Just kidding, if any project gets me hired, it'll be this one!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-off slide-right">Next</button>
         </section>
         <!-- Contact Section -->
         <section>
-
+            <h2 id="contact"><span>Contact Me</span></h2>
+            <form 
+                action="https://formsubmit.co/tristanthorburn@gmail.com" 
+                method="POST" 
+                class="wrapper contact-form"/>
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder="Name"
+                        class="input-name"
+                        required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Email"
+                        class="input-email"
+                        required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea 
+                        type="message" 
+                        name="message" 
+                        id="message"
+                        placeholder="Message"
+                        class="input-message">
+                    </textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form> 
+        </section>
+        <!-- Archive -->
+        <section>
+            <h2>Archive</h2>
+            <p>Links to older projects to remind me of my coding journey</p>
+            <ul>
+                <li>
+                    <a href="idyllic-pavlova-61584b.netlify.app">Portfolio 1.0</a>
+                </li>
+                <li>Older Projects:
+                    <a href="https://tubular-boba-56667e.netlify.app">One Magazine</a>
+                    <a href="https://joyful-entremet-75e854.netlify.app">Spaces</a>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
-
+        <div>
+            <h3 class="logoBottom"><span>T</span>ristan</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/tristanthorburn/">
+                    <i class="fa-brands fa-linkedin" alt="link to linked in profile"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/TristanThorburn">
+                    <i class="fa-brands fa-github" alt="link to github profile"></i></a>
+            </li>
+            <li>
+                <a href="./assets/tristan-FE-resume.docx.pdf" alt="link to resume"><i class="fa-solid fa-file"></i></a>
+            </li>
+        </ul>
     </footer>
     <script src="./script/app.js"></script>
 </body>

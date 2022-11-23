@@ -1,0 +1,85 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+nav{
+    background-color:$bgPrimary;
+    position: relative;
+}
+
+.hamburger{
+    position:fixed;
+    top:5px;
+    left:2.5px;
+    height:40px;
+    width:40px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color:$bgSecondary;  
+}
+
+.hamburger.active :nth-child(1){
+    transform:translateY(12px) rotate(45deg);
+}
+
+.hamburger.active :nth-child(2){
+    display:none;
+}
+
+.hamburger.active :nth-child(3){
+    transform:translateY(2px) rotate(-45deg);
+}
+
+.bar{
+    display:block;
+    background-color:$textPrimary;
+    width:30px;
+    height:5px;
+    margin:6px auto;
+    transition:all 0.5s;
+    cursor: pointer;
+}
+
+.logo span{
+    @include T;
+}
+
+.logo{
+    @include ristan;
+    position:absolute;
+    top:-65px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.desktopNav{
+    position:absolute;
+    background-color:$bgSecondary;
+    width:100%;
+    margin-top:-11%;
+    left:100%;
+    transition:all 1s;
+
+    ul{
+        @include flexColCen;
+        padding:0;
+        margin:0;
+        list-style-type: none;
+    }
+    li{
+        margin:0.5rem auto;
+    }
+    a{
+        @include fontBasics;
+        text-decoration: none;
+        // "20-36px"
+        font-size: clamp(1.25rem, 1.05rem + 1vw, 2.25rem);
+    }
+}
+
+.desktopNav a:hover{
+    color:$accentColor;
+}
+
+.desktopNav.active{
+    left:0;
+}

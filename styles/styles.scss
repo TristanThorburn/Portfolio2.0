@@ -2,6 +2,6 @@
 @use './variables';
 @use './mixins';
 
-.mobileHidden{
-    display:none;
-}
+@use './general';
+@use './navs';
+@use './header';
