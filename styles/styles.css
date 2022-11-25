@@ -233,6 +233,10 @@ html {
   font-family: dizhitlBold;
   src: url(../assets/fonts/dizhitl/dizhitl-bold.ttf);
 }
+.mobileHidden {
+  display: none;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1620px;
@@ -240,15 +244,20 @@ html {
 }
 
 body {
-  background-color: #000000;
+  background-color: hsl(0deg, 0%, 0%);
 }
 
 .bgSecondary {
-  background-color: #1e1e1e;
+  background-color: hsl(0deg, 0%, 12%);
 }
 
-.mobileHidden {
-  display: none;
+span {
+  color: hsl(101deg, 77%, 40%);
+}
+
+p {
+  font-family: dizhitl;
+  color: hsl(0deg, 0%, 100%);
 }
 
 img {
@@ -256,22 +265,41 @@ img {
 }
 
 [src$=".svg"] {
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
 }
 
 [src$="reactLeaflet.svg"] {
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
 }
 
-p {
-  font-family: dizhitl;
-  color: #ffffff;
+.fa-brands, .fa-solid {
+  font-size: 2rem;
+}
+
+.fa-linkedin {
+  color: hsl(201deg, 100%, 35%);
+}
+
+.fa-file {
+  color: hsl(201deg, 100%, 35%);
+}
+
+.fa-spotify {
+  color: hsl(141deg, 73%, 42%);
+}
+
+.fa-steam {
+  color: hsl(206deg, 99%, 41%);
+}
+
+.fa-github {
+  color: hsl(0deg, 0%, 100%);
 }
 
 nav {
-  background-color: #000000;
+  background-color: hsl(0deg, 0%, 0%);
   position: relative;
 }
 
@@ -283,7 +311,7 @@ nav {
   width: 40px;
   border-radius: 5px;
   z-index: 1;
-  background-color: #1e1e1e;
+  background-color: hsl(0deg, 0%, 12%);
 }
 
 .hamburger.active :nth-child(1) {
@@ -300,7 +328,7 @@ nav {
 
 .bar {
   display: block;
-  background-color: #ffffff;
+  background-color: hsl(0deg, 0%, 100%);
   width: 30px;
   height: 5px;
   margin: 6px auto;
@@ -308,13 +336,8 @@ nav {
   cursor: pointer;
 }
 
-.logo span {
-  color: #49b517;
-  font-size: clamp(2.25rem, 2.15rem + 0.5vw, 2.75rem);
-}
-
 .logo {
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   font-family: dizhitl;
   text-align: center;
   font-size: clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem);
@@ -323,7 +346,7 @@ nav {
 
 .desktopNav {
   position: absolute;
-  background-color: #1e1e1e;
+  background-color: hsl(0deg, 0%, 12%);
   width: 100%;
   margin-top: -11%;
   left: 100%;
@@ -343,13 +366,13 @@ nav {
 .desktopNav a {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   text-decoration: none;
   font-size: clamp(1.25rem, 1.05rem + 1vw, 2.25rem);
 }
 
 .desktopNav a:hover {
-  color: #49b517;
+  color: hsl(101deg, 77%, 40%);
 }
 
 .desktopNav.active {
@@ -357,7 +380,7 @@ nav {
 }
 
 header {
-  background-color: #000000;
+  background-color: hsl(0deg, 0%, 0%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,18 +389,15 @@ header {
 h1 {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   text-align: center;
   margin-top: 20%;
-}
-h1 span {
-  color: #49b517;
 }
 
 h2 {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
   text-align: center;
 }
 
@@ -397,4 +417,49 @@ h2 {
   max-width: 100%;
   transform: rotate(-45deg);
   scale: 1.42;
+}
+
+.aboutMe h2 {
+  padding-top: 1.5rem;
+}
+
+.aboutUl {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 0;
+}
+.aboutUl li {
+  margin: 10% auto;
+}
+
+.techUl {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.techUl i {
+  color: hsl(101deg, 77%, 40%);
+}
+.techUl [src$=".svg"] {
+  filter: invert(76%) sepia(37%) saturate(5601%) hue-rotate(58deg) brightness(89%) contrast(86%);
+}
+.techUl span {
+  display: none;
+}
+
+.techUl li:hover i {
+  display: none;
+}
+
+.techUl li:hover img {
+  display: none;
+}
+
+.techUl li:hover span {
+  display: block;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
 }/*# sourceMappingURL=styles.css.map */

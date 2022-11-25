@@ -1,12 +1,15 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+.mobileHidden{
+    display:none;
+}
 .wrapper{
     margin:0 auto;
     max-width:1620px;
     width:80%;
 }
-
+// BACKGROUNDS----------------------
 body{
     background-color:$bgPrimary;
 }
@@ -14,26 +17,49 @@ body{
 .bgSecondary{
     background-color:$bgSecondary;
 }
-
-.mobileHidden{
-    display:none;
-}
-
-img{
-    width:100%;
-}
-
-[src$='.svg']{
-    height:20px;
-    width:20px;
-}
-
-[src$='reactLeaflet.svg']{
-    height:100px;
-    width:100px;
+// FONTS---------------------------
+span{
+    color:$accentColor;
 }
 
 p{
     font-family:dizhitl;
+    color:$textPrimary;
+}
+// IMAGES--------------------------
+img{
+    width:100%;
+}
+// SVG-------------------
+[src$='.svg']{
+    height:2rem;
+    width:2rem;
+}
+
+[src$='reactLeaflet.svg']{
+    height:5rem;
+    width:5rem;
+}
+// FONTAWESOME(ABOUT ME)
+.fa-brands, .fa-solid{
+    font-size:2rem;
+}
+.fa-linkedin{
+    color:$linkedin;
+}
+
+.fa-file{
+    color:$linkedin;
+}
+
+.fa-spotify{
+    color:$spotify;
+}
+
+.fa-steam{
+    color:$steam;
+}
+
+.fa-github{
     color:$textPrimary;
 }

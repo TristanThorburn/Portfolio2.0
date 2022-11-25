@@ -1,6 +1,12 @@
-$bgPrimary:#000000;
-$bgSecondary:#1e1e1e;
-$textPrimary:#ffffff;
-$accentColor:#49b517;
+$bgPrimary:hsl(0, 0%, 0%);
+$bgSecondary:hsl(0, 0%, 12%);
+$textPrimary:hsl(0, 0%, 100%);
+$accentColor:hsl(101, 77%, 40%);
+
+$linkedin:hsl(201, 100%, 35%);
+$spotify:hsl(141, 73%, 42%);
+$steam:hsl(206, 99%, 41%);
+
+$accentFilter:invert(76%) sepia(37%) saturate(5601%) hue-rotate(58deg) brightness(89%) contrast(86%);
 
 $primaryFontFam:dizhitl;

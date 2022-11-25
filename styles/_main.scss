@@ -1,0 +1,57 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+// ABOUT ME SECTION----------------
+.aboutMe{
+    h2{
+        padding-top:1.5rem;
+    }
+}
+
+.aboutUl{
+    list-style:none;
+    display:flex;
+    gap:1rem;
+    justify-content: space-evenly;
+    padding:0;
+
+    li{
+        margin:10% auto;
+    }
+}
+
+// TECH STACK SECTION-------------
+.techUl{
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2rem;
+
+    i{
+        color:$accentColor;
+    }
+
+    [src$='.svg']{
+        filter:$accentFilter;
+    }
+
+    span{
+        display:none;
+    }
+}
+
+.techUl li:hover i{
+    display:none;
+}
+
+.techUl li:hover img{
+    display:none;
+}
+
+.techUl li:hover span{
+    display:block;
+    text-transform:uppercase;
+    // 16-24
+    font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
+}
+// PROJECTS SECTION----------------

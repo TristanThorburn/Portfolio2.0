@@ -39,10 +39,6 @@ nav{
     cursor: pointer;
 }
 
-.logo span{
-    @include T;
-}
-
 .logo{
     @include ristan;
     margin:0 auto;

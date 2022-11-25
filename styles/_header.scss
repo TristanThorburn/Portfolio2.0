@@ -9,10 +9,6 @@ h1{
     @include fontBasics;
     text-align: center;
     margin-top:20%;
-
-    span{
-        color:$accentColor;
-    }
 }
 
 h2{
