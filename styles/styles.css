@@ -620,12 +620,12 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   display: block;
   padding-bottom: 1.5rem;
 }
-.eggy .projectImage {
-  box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-  -webkit-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-  -moz-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+.eggy img {
+  box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(255, 215, 0, 0.75);
 }
-.eggy .projectImage:hover, .eggy .projectImage:focus {
+.eggy img:hover, .eggy img:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -650,6 +650,9 @@ footer ul {
   justify-content: space-evenly;
   padding: 0;
   list-style: none;
+}
+footer p {
+  text-align: center;
 }
 
 .bottomT {

@@ -194,12 +194,12 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     display:block;
     padding-bottom:1.5rem;
 
-    .projectImage{
-        box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-        -webkit-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-        -moz-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    img{
+        box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
+        -webkit-box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
+        -moz-box-shadow: 0px 5px 10px 0px rgba(255, 215, 0, 0.75);
     }
-    .projectImage:hover, .projectImage:focus{
+    img:hover, img:focus{
         box-shadow:none;
         -webkit-box-shadow:none;
         -moz-box-shadow:none;

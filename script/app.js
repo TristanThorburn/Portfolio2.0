@@ -69,6 +69,8 @@ projects.init();
 // ARCHIVE JS
 const archive = {};
 
+let archiveSize;
+
 archive.app = () => {
     const archiveButton = document.querySelector('.archive');
     const archiveContent = document.querySelector('.archiveContent');
@@ -79,7 +81,7 @@ archive.app = () => {
         const eggProject = e.target.nextElementSibling.children[1].children[3];
 
             if(archiveButton.classList.contains('selected')){
-                let archiveSize = archiveContent.scrollHeight;
+                archiveSize = archiveContent.scrollHeight;
 
                 archiveContent.style.maxHeight = archiveSize + 'px';
 
@@ -121,11 +123,12 @@ secret.app = () => {
     const archiveContent = document.querySelector('.archiveContent');
     
     trigger.addEventListener('click', (e) => {
-        reveal.classList.toggle('eggHunt');
         const hint = e.target.nextElementSibling;
+        reveal.classList.toggle('eggHunt');
         hint.classList.toggle('eggHunt');
-            if (archiveContent.classList.contains('.selected')){
-                archiveContent.style.maxHeight = archiveContent.scrollHeight + reveal.scrollHeight + 'px'
+
+            if (archiveContent.classList.contains('selected')){
+                archiveContent.style.maxHeight = archiveContent.maxHeight + reveal.scrollHeight + 'px'
             }
             else{
                 archiveContent.style.maxHeight = archiveContent.scrollHeight;
