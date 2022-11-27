@@ -18,8 +18,8 @@ hamburger.app = () => {
         });
     });
     hamburger.openMenu = symbol.addEventListener('click', () => {
-        symbol.classList.toggle('active')
-        menu.classList.toggle('active')
+        symbol.classList.toggle('active');
+        menu.classList.toggle('active');
     });
     hamburger.closeMenu = links.forEach(link => {
         link.addEventListener('click', () => {
@@ -44,7 +44,7 @@ projects.app = () => {
     projectImage.forEach(project => {
         project.addEventListener('click', (e) => {
             if(window.innerWidth < 1200){
-                project.classList.toggle('active')
+                project.classList.toggle('active');
                 
                     const projectDetails = e.target.parentNode.parentElement.nextElementSibling;
                     if(e.target.parentNode.parentElement.classList.contains("active")){
@@ -89,17 +89,17 @@ archive.app = () => {
                     const scrambled = e.target.parentElement;
                         if(scrambled.classList.contains('cracked') && window.innerWidth < 1200){
                            const dinner = scrambled.parentElement.nextElementSibling.scrollHeight;
-                           const sideDish = scrambled.parentElement.nextElementSibling
+                           const sideDish = scrambled.parentElement.nextElementSibling;
                            archiveSize = archiveSize + dinner;
-                           archiveContent.style.maxHeight = archiveSize + 'px'
+                           archiveContent.style.maxHeight = archiveSize + 'px';
                            
-                           sideDish.style.maxHeight = sideDish.scrollHeight + 'px'
+                           sideDish.style.maxHeight = sideDish.scrollHeight + 'px';
                         }
                         else{
-                            const sideDish = scrambled.parentElement.nextElementSibling
-                            sideDish.style.maxHeight = 0
+                            const sideDish = scrambled.parentElement.nextElementSibling;
+                            sideDish.style.maxHeight = 0;
                         }
-                })
+                });
             }
             else{
                 archiveContent.style.maxHeight = 0;
@@ -112,3 +112,29 @@ archive.init = () => {
 }
 
 archive.init();
+// SECRET PROJECT OOOOOOHHHH
+const secret = {};
+
+secret.app = () => {
+    const trigger = document.querySelector('.bottomT');
+    const reveal = document.querySelector('.egg');
+    const archiveContent = document.querySelector('.archiveContent');
+    
+    trigger.addEventListener('click', (e) => {
+        reveal.classList.toggle('eggHunt');
+        const hint = e.target.nextElementSibling;
+        hint.classList.toggle('eggHunt');
+            if (archiveContent.classList.contains('.selected')){
+                archiveContent.style.maxHeight = archiveContent.scrollHeight + reveal.scrollHeight + 'px'
+            }
+            else{
+                archiveContent.style.maxHeight = archiveContent.scrollHeight;
+            }
+    })
+}
+
+secret.init = () => {
+    secret.app();
+}
+
+secret.init();

@@ -1,7 +1,7 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-.mobileHidden{
+.mobileHidden, .eggHunt{
     display:none;
 }
 .wrapper{
