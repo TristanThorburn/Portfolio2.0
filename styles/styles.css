@@ -311,6 +311,11 @@ i {
   color: hsl(0deg, 0%, 100%);
 }
 
+.scrambled {
+  text-align: center;
+  color: gold;
+}
+
 nav {
   background-color: hsl(0deg, 0%, 0%);
   position: relative;
