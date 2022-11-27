@@ -13,12 +13,12 @@ nav{
     height:40px;
     width:40px;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 10;
     background-color:$bgSecondary;  
 }
 
 .hamburger.active :nth-child(1){
-    transform:translateY(12px) rotate(45deg);
+    transform:translateY(12px) rotate(90deg);
 }
 
 .hamburger.active :nth-child(2){
@@ -26,7 +26,7 @@ nav{
 }
 
 .hamburger.active :nth-child(3){
-    transform:translateY(2px) rotate(-45deg);
+    transform:translateY(-14px) rotate(-180deg);
 }
 
 .bar{
@@ -43,14 +43,19 @@ nav{
     @include ristan;
     margin:0 auto;
 }
+.logoT{
+    @include T;
+}
 
 .desktopNav{
-    position:absolute;
+    position:fixed;
     background-color:$bgSecondary;
     width:100%;
-    margin-top:-11%;
+    top:0%;
     left:100%;
     transition:all 1s;
+    z-index: 1;
+    border:2px solid $accentColor;
 
     ul{
         @include flexColCen;

@@ -2,18 +2,12 @@
 @use './mixins' as *;
 
 // ABOUT ME SECTION----------------
-.aboutMe{
-    h2{
-        padding-top:1.5rem;
-    }
-}
-
 .aboutUl{
     list-style:none;
     display:flex;
-    gap:1rem;
     justify-content: space-evenly;
     padding:0;
+    gap:0.75rem;
 
     li{
         margin:10% auto;
@@ -21,37 +15,170 @@
 }
 
 // TECH STACK SECTION-------------
+.techSkills{
+    h2{
+        padding-top:0;
+    }
+}
 .techUl{
     padding:0;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:2rem;
 
+    li{
+        @include flexColCen;
+        text-align: center;
+    }
+    p{
+        // 12-36px
+        font-size: clamp(0.75rem, 0.45rem + 1.5vw, 2.25rem);
+    }
     i{
         color:$accentColor;
     }
-
-    [src$='.svg']{
-        filter:$accentFilter;
-    }
-
-    span{
-        display:none;
-    }
-}
-
-.techUl li:hover i{
-    display:none;
-}
-
-.techUl li:hover img{
-    display:none;
-}
-
-.techUl li:hover span{
-    display:block;
-    text-transform:uppercase;
-    // 16-24
-    font-size: clamp(1rem, 0.75rem + 1.25vw, 2.25rem);
 }
 // PROJECTS SECTION----------------
+.slide{
+    margin-top:15%;
+}
+
+.projects{
+    h2{
+        margin:0 auto 10%;
+    }
+    i{
+        // 18-36px
+        font-size: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+    }
+    [src$='.svg']{
+        width: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+    }
+}
+
+.projectImage{
+    box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+    -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+    -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+}
+
+.projectLinks{
+    display:flex;
+    justify-content: space-around;
+    gap:1rem;
+
+    a{
+        @include flexColCen;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    a{
+        color:$accentColor;
+    }
+}
+
+.projectInfo{
+    h3{
+        color:$textPrimary;
+        font-family: dizhitl;
+        // 18-50px
+        font-size: clamp(1.125rem, 0.875rem + 1.875vw, 3.125rem);
+        margin-top:0;
+    }
+
+    ul{
+        list-style:none;
+        padding:0;
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.5rem;
+        justify-content: space-evenly;
+        color:$accentColor;
+    }
+    a{
+        color:$accentColor;
+        text-decoration: none;
+    }
+}
+
+.partners{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+// CONTACT SECTION-----------------
+.contact{
+    h2{
+        padding-top:0;
+    }
+}
+
+input{
+    margin:0.5rem auto;
+    font-family:dizhitl;
+    width:100%;
+    height:2rem;
+}
+
+textarea{
+    margin:0.5rem auto 1rem;
+    width:100%;
+    font-family:dizhitl;
+    text-align: left;
+    min-height:10rem;
+}
+
+.formButtons{
+    display:flex;
+    justify-content: space-evenly;
+    gap:1rem;
+}
+
+[type='reset']{
+    max-width:30%;
+}
+
+button{
+    cursor: pointer;
+    font-family:dizhitl;
+    min-height:2rem;
+    width:100%
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:focus{
+    border:5px solid $accentColor;
+    outline:none;
+}
+// ARCHIVE SECTION---------------
+.archive{
+    ul{
+        padding:0;
+        list-style:none;
+    }
+    li{
+        color:$textPrimary;
+    }
+    a{
+        text-decoration:none;
+        font-family:dizhitl;
+        color:$accentColor;
+    }
+}
+
+.eggy{
+    display:block;
+    padding-bottom:1.5rem;
+
+    img{
+    box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    -webkit-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    -moz-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    }
+    a{
+        color:gold;
+    }
+    i{
+        // 18-36px
+        font-size: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+        color:gold;
+    }
+}

@@ -1,0 +1,23 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+footer{
+    ul{
+        display:flex;
+        justify-content:space-evenly;
+        padding:0;
+        list-style:none;
+    }
+}
+
+.bottomT{
+    color:$accentColor;
+    font-family:dizhitl;
+    text-align: center;
+    font-size: clamp(2.25rem, 2.175rem + 0.375vw, 2.625rem);
+    margin:0 auto;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+

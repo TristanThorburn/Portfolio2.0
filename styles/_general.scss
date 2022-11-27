@@ -18,6 +18,26 @@ body{
     background-color:$bgSecondary;
 }
 // FONTS---------------------------
+h2{
+    @include fontBasics;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+    // 28-48px
+    font-size: clamp(1.75rem, 1.5rem + 1.25vw, 3rem);
+    position: relative;
+    padding-top:1.5rem;
+}
+
+h2:after{
+    content:"";
+    border-bottom:2px solid $accentColor;
+    position: absolute;
+    width:33%;
+    bottom:-10%;
+    left:33%
+}
+
 span{
     color:$accentColor;
 }
@@ -25,6 +45,8 @@ span{
 p{
     font-family:dizhitl;
     color:$textPrimary;
+    line-height: 1.5;
+    // 600px width for desktop
 }
 // IMAGES--------------------------
 img{
@@ -32,17 +54,14 @@ img{
 }
 // SVG-------------------
 [src$='.svg']{
-    height:2rem;
-    width:2rem;
-}
-
-[src$='reactLeaflet.svg']{
-    height:5rem;
-    width:5rem;
+    // 40-85px
+    width:clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
+    filter:$accentFilter;
 }
 // FONTAWESOME(ABOUT ME)
-.fa-brands, .fa-solid{
-    font-size:2rem;
+i{
+    // 40-85px
+    font-size: clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
 }
 .fa-linkedin{
     color:$linkedin;

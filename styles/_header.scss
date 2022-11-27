@@ -4,22 +4,26 @@
 header{
     background-color:$bgPrimary;
     @include flexColCen;
+
+    h2:after{
+        content:"";
+        border-bottom:none;
+    }
 }
+
 h1{
     @include fontBasics;
     text-align: center;
-    margin-top:20%;
-}
-
-h2{
-    @include fontBasics;
-    text-align: center;
+    line-height: 1.2;
+    margin-top:50%;
+    // 48-70px
+    font-size: clamp(3rem, 2.725rem + 1.375vw, 4.375rem);
 }
 
 .headshot{
     border-radius:25px;
     display:block;
-    margin:20% auto 5%;
+    margin:20% auto;
     transform: rotate(45deg);
     overflow:hidden;
     width:60vw;
