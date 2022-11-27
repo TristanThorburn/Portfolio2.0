@@ -43,6 +43,8 @@
 }
 
 .projects{
+    padding-bottom:1.5rem;
+
     h2{
         margin:0 auto 10%;
     }
@@ -59,6 +61,15 @@
     box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
     -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
     -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+    cursor: pointer;
+    transition:all 0.5s;
+}
+
+.projectImage:hover, .projectImage:focus{
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    border:5px solid $accentColor;
 }
 
 .projectLinks{
@@ -77,6 +88,10 @@
 }
 
 .projectInfo{
+    max-height:0;
+    overflow:hidden;
+    transition:1s ease-out;
+
     h3{
         color:$textPrimary;
         font-family: dizhitl;
@@ -131,6 +146,7 @@ textarea{
     display:flex;
     justify-content: space-evenly;
     gap:1rem;
+    margin-bottom:1.5rem;
 }
 
 [type='reset']{
@@ -150,6 +166,16 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 }
 // ARCHIVE SECTION---------------
 .archive{
+    cursor: pointer;
+    margin:1.5rem auto;
+    text-transform: uppercase;
+}
+
+.archiveContent{
+    max-height:0;
+    overflow:hidden;
+    transition:1s ease-out;
+
     ul{
         padding:0;
         list-style:none;
@@ -168,10 +194,16 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     display:block;
     padding-bottom:1.5rem;
 
-    img{
-    box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-    -webkit-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
-    -moz-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    .projectImage{
+        box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+        -webkit-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+        -moz-box-shadow: 10px 5px 9px 0px rgba(255, 215, 0, 0.75);
+    }
+    .projectImage:hover, .projectImage:focus{
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        border:5px solid gold;
     }
     a{
         color:gold;
@@ -181,4 +213,10 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
         font-size: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
         color:gold;
     }
+}
+
+.eggInfo{
+    max-height:0;
+    overflow:hidden;
+    transition:1s ease-out;
 }
