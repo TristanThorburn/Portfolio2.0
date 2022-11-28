@@ -69,43 +69,38 @@ projects.init();
 // ARCHIVE JS
 const archive = {};
 
-let archiveSize;
-
 archive.app = () => {
     const archiveButton = document.querySelector('.archive');
-    const archiveContent = document.querySelector('.archiveContent');
+    const archiveContent = document.querySelector('.archiveContent')
+    const eggProject = document.querySelector('.egg');
+    const eggImage = eggProject.children[1].children[0];
+    const eggDetails = eggProject.children[1].children[1];
+    const trigger = document.querySelector('.bottomT');
 
-    archiveButton.addEventListener('click', (e) => {
-        archiveButton.classList.toggle('selected');
+    trigger.addEventListener('click', (e) => {
+        const hint = e.target.nextElementSibling;
+        hint.classList.toggle('eggHunt');
+        eggProject.classList.toggle('eggHunt');
+    });
 
-        const eggProject = e.target.nextElementSibling.children[1].children[3];
+    archiveButton.addEventListener('click', () => {
+        archiveContent.classList.toggle('openArchive')
+        
+        if(archiveContent.classList.contains('openArchive')){
+            archiveContent.style.maxHeight = archiveContent.scrollHeight + eggImage.scrollHeight + eggDetails.scrollHeight + 'px'
+        } else{
+            archiveContent.style.maxHeight = 0
+        }
+    });
 
-            if(archiveButton.classList.contains('selected')){
-                archiveSize = archiveContent.scrollHeight;
+    eggProject.addEventListener('click', (e) => {
+        eggDetails.classList.toggle('openProject')
 
-                archiveContent.style.maxHeight = archiveSize + 'px';
-
-                eggProject.addEventListener('click', (e) => {
-                    e.target.parentElement.classList.toggle('cracked');
-
-                    const scrambled = e.target.parentElement;
-                        if(scrambled.classList.contains('cracked') && window.innerWidth < 1200){
-                           const dinner = scrambled.parentElement.nextElementSibling.scrollHeight;
-                           const sideDish = scrambled.parentElement.nextElementSibling;
-                           archiveSize = archiveSize + dinner;
-                           archiveContent.style.maxHeight = archiveSize + 'px';
-                           
-                           sideDish.style.maxHeight = sideDish.scrollHeight + 'px';
-                        }
-                        else{
-                            const sideDish = scrambled.parentElement.nextElementSibling;
-                            sideDish.style.maxHeight = 0;
-                        }
-                });
-            }
-            else{
-                archiveContent.style.maxHeight = 0;
-            }
+        if(eggDetails.classList.contains('openProject')){
+            eggDetails.style.maxHeight = eggDetails.scrollHeight + 'px';
+        } else {
+            eggDetails.style.maxHeight = 0;
+        }
     });
 }
 
@@ -114,30 +109,4 @@ archive.init = () => {
 }
 
 archive.init();
-// SECRET PROJECT OOOOOOHHHH
-const secret = {};
 
-secret.app = () => {
-    const trigger = document.querySelector('.bottomT');
-    const reveal = document.querySelector('.egg');
-    const archiveContent = document.querySelector('.archiveContent');
-    
-    trigger.addEventListener('click', (e) => {
-        const hint = e.target.nextElementSibling;
-        reveal.classList.toggle('eggHunt');
-        hint.classList.toggle('eggHunt');
-
-            if (archiveContent.classList.contains('selected')){
-                archiveContent.style.maxHeight = archiveContent.maxHeight + reveal.scrollHeight + 'px'
-            }
-            else{
-                archiveContent.style.maxHeight = archiveContent.scrollHeight;
-            }
-    })
-}
-
-secret.init = () => {
-    secret.app();
-}
-
-secret.init();
