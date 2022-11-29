@@ -279,7 +279,7 @@ p {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 [src$=".svg"] {
@@ -427,7 +427,6 @@ h1 {
 
 .headshot {
   border-radius: 25px;
-  display: block;
   margin: 20% auto;
   transform: rotate(45deg);
   overflow: hidden;
@@ -438,7 +437,6 @@ h1 {
 }
 
 .headshot img {
-  max-width: 100%;
   transform: rotate(-45deg);
   scale: 1.42;
 }
