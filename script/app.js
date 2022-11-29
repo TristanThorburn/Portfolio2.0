@@ -82,6 +82,12 @@ archive.app = () => {
         const hint = e.target.nextElementSibling;
         hint.classList.toggle('eggHunt');
         eggProject.classList.toggle('eggHunt');
+
+            if (archiveContent.classList.contains('openArchive')) {
+                hint.innerText = 'Looks like the archive didnt open all the way...'
+            } else {
+                hint.innerText = 'I think something happened in the archive...'
+            }
     });
 
     archiveButton.addEventListener('click', () => {

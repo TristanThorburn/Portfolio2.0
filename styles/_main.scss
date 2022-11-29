@@ -63,6 +63,16 @@
     -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
     cursor: pointer;
     transition:all 0.5s;
+    position:relative;
+}
+
+.projectImage:after{
+    content:'\f25a';
+    font-family:'Font Awesome 5 Free';
+    font-weight:900;
+    color:$textPrimary;
+    position:absolute;
+    bottom:0;
 }
 
 .projectImage:hover, .projectImage:focus{
