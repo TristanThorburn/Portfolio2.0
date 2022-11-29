@@ -46,8 +46,9 @@ projects.app = () => {
             if(window.innerWidth < 1200){
                 project.classList.toggle('active');
                 
-                    const projectDetails = e.target.parentNode.parentElement.nextElementSibling;
-                    if(e.target.parentNode.parentElement.classList.contains("active")){
+                    const projectDetails = e.target.parentNode.nextElementSibling;
+
+                    if(e.target.parentNode.classList.contains("active")){
                         projectDetails.style.maxHeight = projectDetails.scrollHeight + "px";
                     }
                     else{
