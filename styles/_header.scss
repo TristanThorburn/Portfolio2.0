@@ -72,3 +72,9 @@ h1{
         margin:0% auto;
     }
 }
+
+@media(min-width:1199px){
+    .h1Container{
+        max-width:50%;
+    }
+}
