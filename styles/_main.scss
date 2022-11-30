@@ -27,6 +27,7 @@
 
     li{
         @include flexColCen;
+        justify-content: center;
         text-align: center;
     }
     p{
