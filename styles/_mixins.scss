@@ -2,14 +2,13 @@
 
 @mixin T {
     color:$accentColor;
-    font-size: clamp(2.25rem, 2.175rem + 0.375vw, 2.625rem);
 }
 @mixin ristan {
     color:$textPrimary;
     font-family: dizhitl;
     text-align: center;
-    // "28-36px"
-    font-size: clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem);
+    // "26-30px"
+    font-size: clamp(1.625rem, 0.1719rem + 2.2727vw, 1.875rem);
 }
 
 @mixin flexColCen {

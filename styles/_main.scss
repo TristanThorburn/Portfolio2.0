@@ -198,11 +198,16 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     }
     li{
         color:$textPrimary;
+        padding-top:1rem;
     }
     a{
         text-decoration:none;
         font-family:dizhitl;
         color:$accentColor;
+    }
+
+    ul li:nth-child(-n+3){
+        border-bottom:2px solid $accentColor;
     }
 }
 

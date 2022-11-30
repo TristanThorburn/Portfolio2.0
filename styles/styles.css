@@ -254,7 +254,7 @@ h2 {
   text-align: center;
   line-height: 1.2;
   letter-spacing: 1.2px;
-  font-size: clamp(1.75rem, 1.5rem + 1.25vw, 3rem);
+  font-size: clamp(1.625rem, 1.45rem + 0.875vw, 2.5rem);
   position: relative;
   padding-top: 1.5rem;
 }
@@ -284,12 +284,13 @@ img {
 }
 
 [src$=".svg"] {
-  width: clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
+  width: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
+  height: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
   filter: invert(76%) sepia(37%) saturate(5601%) hue-rotate(58deg) brightness(89%) contrast(86%);
 }
 
 i {
-  font-size: clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
+  font-size: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
 }
 
 .fa-linkedin, .fa-file {
@@ -310,6 +311,9 @@ i {
 
 .scrambled {
   text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
+  letter-spacing: 1.25px;
   color: gold;
 }
 
@@ -363,13 +367,12 @@ nav {
   color: hsl(0deg, 0%, 100%);
   font-family: dizhitl;
   text-align: center;
-  font-size: clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem);
+  font-size: clamp(1.625rem, 0.1719rem + 2.2727vw, 1.875rem);
   margin: 0 auto;
 }
 
 .logoT {
   color: hsl(101deg, 77%, 40%);
-  font-size: clamp(2.25rem, 2.175rem + 0.375vw, 2.625rem);
 }
 
 .desktopNav {
@@ -420,6 +423,10 @@ nav {
     display: flex;
     border: none;
   }
+  .desktopNav h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
   .desktopNav ul {
     width: 50%;
     flex-direction: row;
@@ -465,7 +472,7 @@ h1 {
 
 @media (min-width: 500px) {
   .headshot {
-    width: 300px;
+    width: 360px;
   }
   h1 {
     margin-top: 25%;
@@ -474,6 +481,7 @@ h1 {
 @media (min-width: 767px) {
   header {
     flex-direction: row;
+    margin-top: 5%;
   }
   header h2 {
     text-align: left;
@@ -482,7 +490,7 @@ h1 {
   .h1Container {
     display: flex;
     flex-direction: column;
-    margin: 20% auto 10%;
+    margin: 10% auto;
   }
   h1 {
     margin: 0;
@@ -684,11 +692,15 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 }
 .archiveContent li {
   color: hsl(0deg, 0%, 100%);
+  padding-top: 1rem;
 }
 .archiveContent a {
   text-decoration: none;
   font-family: dizhitl;
   color: hsl(101deg, 77%, 40%);
+}
+.archiveContent ul li:nth-child(-n+3) {
+  border-bottom: 2px solid hsl(101deg, 77%, 40%);
 }
 
 .eggy {
@@ -748,6 +760,14 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   }
   .about img {
     border-radius: 10px;
+    width: 20vw;
+  }
+  .about h2 {
+    font-size: clamp(1.625rem, 1.5rem + 0.625vw, 2.25rem);
+  }
+  .techSkills h2:after {
+    width: 15%;
+    left: 42.5%;
   }
   .projects {
     padding-bottom: 1rem;
@@ -755,31 +775,25 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   .projects h2 {
     margin: 0 auto;
   }
+  .projects h3 {
+    font-size: clamp(1.125rem, 0.9rem + 1.125vw, 2.25rem);
+  }
   .projects i {
-    font-size: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
   }
   .projects [src$=".svg"] {
-    width: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+    width: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
   }
   .slide {
     display: grid;
     grid-template-columns: 0.4fr 0.6fr;
     align-items: center;
     margin: 5rem auto 2.5rem;
-    position: relative;
-  }
-  .slide:after {
-    content: "";
-    border-bottom: 2px solid hsl(101deg, 77%, 40%);
-    position: absolute;
-    width: 60%;
-    bottom: -10%;
-    right: 0%;
   }
   .projectImage {
     cursor: default;
-    width: 300px;
-    height: 185.414091471px;
+    width: 30vw;
+    height: 18.5414091471vw;
     box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
     -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
     -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
@@ -798,6 +812,8 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid hsl(101deg, 77%, 40%);
   }
   .projectInfo h3 {
     grid-row: 1;
@@ -819,7 +835,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   .projectInfo p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: clamp(0.75rem, -0.7031rem + 2.2727vw, 1rem);
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   }
   .projectLinks {
     justify-content: flex-end;
@@ -837,11 +853,21 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact h2:after {
+    width: 75%;
+    left: 13.5%;
+  }
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 2.5rem;
+    width: 60vw;
   }
   form div:nth-child(3) {
     grid-column: span 2;
@@ -853,13 +879,16 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     margin-top: 0;
     margin-bottom: 0;
   }
-  .archiveButtonContainer {
+  .archiveContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .archive {
-    width: 66%;
+    width: 33vw;
+  }
+  .archiveContent {
+    text-align: center;
   }
   .eggy {
     display: flex;
@@ -867,8 +896,8 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     align-items: center;
   }
   .eggy img {
-    width: 300px;
-    height: 185.414091471px;
+    width: 30vw;
+    height: 18.5414091471vw;
   }
   .eggy .projectInfo {
     display: flex;
@@ -876,6 +905,14 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     align-items: center;
     text-align: center;
     width: 600px;
+    max-height: 0;
+    border-bottom: none;
+  }
+  .eggy .projectInfo h3 {
+    padding-top: 1rem;
+  }
+  .eggy .projectInfo p {
+    padding-top: 1rem;
   }
   .eggy .projectLinks {
     margin-top: 1.5rem;
@@ -884,35 +921,65 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   }
 }
 @media (min-width: 1199px) {
+  .about h2 {
+    font-size: clamp(1.625rem, 1.45rem + 0.875vw, 2.5rem);
+  }
   .techUl {
     grid-template-columns: repeat(6, 1fr);
-  }
-  .techUl [src$=".svg"] {
-    height: clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
   }
   .slide {
     grid-template-columns: 0.4fr 1fr;
     gap: 2rem;
     margin: 5rem auto;
   }
-  .projectImage, .eggy img {
-    width: 350px;
-    height: 216.3164400494px;
-  }
-  .projectInfo h3 {
-    font-size: clamp(1.125rem, 0.9rem + 1.125vw, 2.25rem);
-  }
-  .projectInfo p {
-    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-  }
-  .projectInfo i {
-    font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
-  }
-  .projectInfo [src$=".svg"] {
-    width: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
-  }
   .partners {
     text-align: left;
+  }
+}
+@media (min-width: 1619px) {
+  .about img {
+    width: 15vw;
+  }
+  .projects {
+    padding: 0;
+  }
+  .slideContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    min-height: 40vh;
+    margin: 2.5% auto;
+  }
+  .slideButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .projects .projectInfo {
+    display: none;
+  }
+  .prevButton, .nextButton {
+    display: block;
+    width: 10vw;
+  }
+  .slideTrack {
+    position: relative;
+    left: 12.5%;
+    top: -38%;
+    transform: translateY(-50%);
+  }
+  .slide {
+    margin: 0 auto;
+    position: absolute;
+  }
+  .projectImage {
+    max-width: 600px;
+    max-height: 370.8281829419px;
+  }
+  .desktopDescription {
+    padding-top: clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+  }
+  form {
+    width: 50vw;
   }
 }
 footer ul {

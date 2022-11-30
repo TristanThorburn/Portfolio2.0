@@ -1,3 +1,20 @@
+// CLEANER
+const cleanUp = {};
+
+cleanUp.schedule = () => {
+    outPut = document.querySelector(".desktopDescription");
+    document.addEventListener("scroll", () => {
+        if(window.innerWidth < 1619 && outPut.childNodes.length > 0){
+            outPut.innerHTML = "";
+        }
+    });
+}
+
+cleanUp.init= () => {
+    cleanUp.schedule();
+}
+
+cleanUp.init();
 // MOBILE HAMBURGER MENU
 const hamburger = {};
 
@@ -34,7 +51,35 @@ hamburger.init = () => {
 }
 
 hamburger.init();
+// DESKTOP LOGO JAVASCRIPT
+const logoDesktop = {};
 
+logoDesktop.app = () => {
+    const logo = document.querySelector('.logo')
+    const oldLogoHTML = '<h3 class="logo mobileHidden"><span class="logoT">T</span>ristan</h3>';
+    const newLogoHTML = '<h3><span class="logoT">T</span>ristan <span class="logoT">T</span>horburn</h3>';
+
+        if(window.innerWidth > 1400){
+            logo.innerHTML = newLogoHTML;
+        } else{
+            logo.innerHTML = oldLogoHTML;
+        }
+
+        window.addEventListener('resize', () => {
+            if(window.innerWidth > 1400){
+                logo.innerHTML = newLogoHTML;
+                console.log(logo.innerHTML)
+            } else{
+                logo.innerHTML = oldLogoHTML;
+            }
+        })
+}
+
+logoDesktop.init =() => {
+    logoDesktop.app();
+}
+
+logoDesktop.init();
 //PROJECTS JAVASCRIPT
 const projects = {};
 
@@ -54,10 +99,10 @@ projects.app = () => {
                     else{
                         projectDetails.style.maxHeight = 0;
                     }
-                }
-                else{
-                    project.removeEventListener("click", e);
-                }
+            }
+            else{
+                project.removeEventListener("click", e);
+            }
         });
     });
 }

@@ -93,10 +93,15 @@ nav{
         display:flex;
         border:none;
 
+        h3{
+            margin-top:0.25rem;
+            margin-bottom:0.25rem;
+        }
         ul{
             width:50%;
             flex-direction:row;
             justify-content: space-around;
         }
     }
-}   
+}
+

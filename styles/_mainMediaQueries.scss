@@ -44,9 +44,20 @@
 
         img{
             border-radius:10px;
+            width:20vw;
+        }
+        h2{
+            // 26-36 to fit sizing
+            font-size: clamp(1.625rem, 1.5rem + 0.625vw, 2.25rem);
         }
     }
 // TECK STACK SECTION--------------
+    .techSkills{
+        h2:after{
+            width:15%;
+            left:42.5%;
+        }
+    }
 // PROJECTS SECTION----------------
     .projects{
         padding-bottom:1rem;
@@ -54,35 +65,30 @@
         h2{
             margin:0 auto;
         }
+        h3{
+            // 18-36px
+            font-size: clamp(1.125rem, 0.9rem + 1.125vw, 2.25rem);
+        }
         i{
-            // 16-20px tablet only
-            font-size: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+              // 20-30px
+              font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
         }
         [src$='.svg']{
-            width: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+              width: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
         }
     }
+
     .slide{
         display:grid;
         grid-template-columns:0.4fr 0.6fr;
         align-items: center;
         margin:5rem auto 2.5rem;
-        position:relative;
-    }
-
-    .slide:after{
-        content:"";
-        border-bottom:2px solid $accentColor;
-        position: absolute;
-        width:60%;
-        bottom:-10%;
-        right:0%;
     }
 
     .projectImage{
         cursor:default;
-        width:300px;
-        height:calc(300px / 1.618);
+        width:30vw;
+        height:calc(30vw / 1.618);
         box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
         -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
         -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
@@ -104,6 +110,8 @@
         display:grid;
         grid-template-columns:repeat(3, 1fr);
         gap:0.5rem;
+        padding-bottom:1.5rem;
+        border-bottom:2px solid $accentColor;
 
         h3{
             grid-row:1;
@@ -126,8 +134,8 @@
         p{
             margin-top:0;
             margin-bottom:0;
-            // 12-16px tablet only
-            font-size: clamp(0.75rem, -0.7031rem + 2.2727vw, 1rem);
+            // 16-20px
+            font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
         }
     }
 
@@ -151,11 +159,20 @@
         justify-content: space-evenly;
     }
 // CONTACT SECTION---------------------------------------------------------
+    .contact{
+        @include flexColCen;
+
+        h2:after{
+            width:75%;
+            left:13.5%;
+        }
+    }
     form{
         display:grid;
         grid-template-columns:1fr 1fr;
         gap:1rem;
         margin-bottom:2.5rem;
+        width:60vw;
     }
 
     form div:nth-child(3){
@@ -171,24 +188,42 @@
         margin-bottom:0;
     }
 // ARCHIVE SECTION------------------------
-    .archiveButtonContainer{
+    .archiveContainer{
         @include flexColCen;
     }
+
     .archive{
-        width:66%;
+        width:33vw;
     }
+
+    .archiveContent{
+        text-align:center;
+    }
+
     .eggy{
         @include flexColCen;
     }
+
     .eggy img{
-        width:300px;
-        height:calc(300px / 1.618);
+        width:30vw;
+        height:calc(30vw / 1.618);
     }
+
     .eggy .projectInfo{
         @include flexColCen;
         text-align: center;
         width:600px;
+        max-height:0;
+        border-bottom:none;
+
+        h3{
+            padding-top:1rem;
+        }
+        p{
+            padding-top:1rem;
+        }
     }
+
     .eggy .projectLinks{
         margin-top:1.5rem;
         justify-content: space-evenly;
@@ -198,13 +233,15 @@
 
 @media (min-width:1199px){
 // ABOUT SECTION------------------
+    .about{
+        h2{
+            // 26-40px
+            font-size: clamp(1.625rem, 1.45rem + 0.875vw, 2.5rem);
+        }
+    }
 // TECH SECTION-------------------
     .techUl{
         grid-template-columns:repeat(6, 1fr);
-
-        [src$='.svg']{
-            height:clamp(2.5rem, 1.9375rem + 2.8125vw, 5.3125rem);
-        }
     }
 //PROJECTS SECTION-----------------
     .slide{
@@ -212,33 +249,72 @@
         gap:2rem;
         margin:5rem auto;
     }
-
-    .projectImage, .eggy img{
-        width:350px;
-        height:calc(350px / 1.618);
-    }
-
-    .projectInfo{
-        h3{
-          // 18-36px
-          font-size: clamp(1.125rem, 0.9rem + 1.125vw, 2.25rem);
-        }
-        p{
-            // 16-20px
-            font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-        }
-        i{
-            // 20-30px
-            font-size: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
-        }
-
-        [src$='.svg']{
-            width: clamp(1.25rem, 1.125rem + 0.625vw, 1.875rem);
-        }
-    }
     .partners{
         text-align:left;
     }
 // CONTACT SECTION-----------------
 // ARCHIVE SECTION----------------- 
+}
+
+@media (min-width:1619px){
+// ABOUT SECTION-------------------
+    .about{
+        img{
+            width:15vw;
+        }
+    }
+// TECH SKILLS SECTION-------------
+// PROJECTS SECTION----------------
+    .projects{
+        padding:0;
+    }
+
+    .slideContainer{
+        display:grid;
+        grid-template-columns:1fr 2fr 1fr;
+        align-items: center;
+        min-height:40vh;
+        margin:2.5% auto;
+    }
+
+    .slideButtonContainer{
+        display:flex;
+        justify-content: center;
+    }
+
+    .projects .projectInfo{
+        display:none;
+    }
+
+    .prevButton, .nextButton{
+        display:block;
+        width:10vw;
+    }
+
+    .slideTrack{
+        position:relative;
+        left:12.5%;
+        top:-38%;
+        transform:translateY(-50%);
+    }
+
+    .slide{
+        margin:0 auto;
+        position: absolute;
+    }
+
+    .projectImage{
+        max-width:600px;
+        max-height:calc(600px / 1.618);
+    }
+
+    .desktopDescription{
+        // 10-20px > 1620w
+        padding-top:clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+    }
+// CONTACT SECTION-----------------
+    form{
+        width:50vw;
+    }
+// ARCHIVE SECTION-----------------
 }
