@@ -18,15 +18,14 @@
 <body>
     <nav>
 
-        <div class="hamburger">
+        <div class="hamburger desktopHidden">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
 
-        <h3 class="logo mobileHidden"><span class="logoT">T</span>ristan</h3>
-
         <div class="desktopNav">
+            <h3 class="logo mobileHidden"><span class="logoT">T</span>ristan</h3>
             <ul>
                 <li><a href="#home" class="navLink">Home</a></li>
                 <li><a href="#about" class="navLink">About</a></li>
@@ -38,7 +37,7 @@
     </nav>
     <header class="wrapper">
 
-            <div>
+            <div class="h1Container">
                 <h1>Hello, I'm <span>T</span>ristan</h1>
                 
                 <h2>Fron<span>t</span> End Web Developer</h2>
@@ -53,9 +52,9 @@
     </header>
     <main>
         <section class="bgSecondary"><!--ABOUT-------------------------------------->
-            <div class="wrapper">
+            <div class="wrapper about">
 
-                <div class="mobileHidden">
+                <div class="mobileHidden aboutImg">
                     <img 
                     srcset="./assets/images/headshotAlt310.webp 310w, ./assets/images/headshotAlt1418.webp 1418w, ./assets/images/headshotAlt2074.webp 2074w, ./assets/images/headshotAlt3648.webp 3648w"
                     src="./assets/images/barMenuHelper1891.webp" alt="image of tristan">
@@ -65,8 +64,6 @@
                     <h2 id="about">An Introduc<span>t</span>ion Abou<span>t</span> Me</h2>
 
                     <p>I am a front end developer who enjoys the challenge of translating the ideas and design of a project to a working and accessible site. Prior to entering the tech field I worked in the hospitality industry for 12 years.</p>
-
-                    <br>
 
                     <p>Now, I am a recent graduate of Juno College's Web Development Bootcamp. My time at Juno gave me the opportunity to hone skills in HTML5, CSS3, Javascript, React and Firebase. I was able to practice these skills with several projects which were both individual and team work based.</p>
 
@@ -161,9 +158,9 @@
         <section id="projects"  class="bgSecondary projects"><!-- Projects Section ---------->
             <h2 class="wrapper">Projec<span>t</span> Collec<span>t</span>ion</h2>
 
-            <button class="mobileHidden">Previous</button>
+            <button class="prevButton">Previous</button>
 
-            <div class="wrapper"><!--SLIDE CONTAINER--------------------------------->
+            <div class="wrapper slideContainer"><!--SLIDE CONTAINER--------------------------------->
                 <div class="slide"><!--PROJECT 1-->
                     <div class = "projectImage">
                         <img 
@@ -185,7 +182,7 @@
                         </div>
                         <h3>Bar Menu Helper</h3>
                         <p>About:</p>
-                        <p>Bar Menu Helper is a multi component React application based on Axios for API calls, utilizing useState and useEffect hooks for functionality as well as practicing the use of passing props through components. </p>
+                        <p class="projectAbout">Bar Menu Helper is a multi component React application based on Axios for API calls, utilizing useState and useEffect hooks for functionality as well as practicing the use of passing props through components. </p>
                         <ul>
                             <li>
                                 <i class="fa-brands fa-react" sr-only="react icon" aria-hidden="true"></i>
@@ -225,8 +222,10 @@
                             <a href="https://github.com/shaishav007">Shaishav Vashi</a>
                             <a href="https://github.com/dildeepgill">Dildeep Gill</a></p>
                         <p>About:</p>
-                        <p>The final group project from our Juno College Bootcamp. Our task was to create a react app that calls API data for earth quakes and then stores it on firebase, based on magnitude.</p> 
-                        <p>We utilized several npm installs including react leaflet to generate a map, spinners react and react typewriter effect to add styling. As our original API did not allow for location searches we included a stretch goal, refactoring the API call to chain two into a final call that would generate on the map.
+                        <p class="projectAbout">The final group project from our Juno College Bootcamp. Our task was to create a react app that calls API data for earth quakes and then stores it on firebase, based on magnitude.
+                        <br>
+                        <br>
+                        We utilized several npm installs including react leaflet to generate a map, spinners react and react typewriter effect to add styling. As our original API did not allow for location searches we included a stretch goal, refactoring the API call to chain two into a final call that would generate on the map.
                         </p>
                         <ul>
                             <li>
@@ -273,7 +272,7 @@
                             <a href="https://github.com/myboyblue519">Mattew Van Luxemborg</a> 
                             <a href="https://github.com/PPableo">Paul Pableo</a></p>
                         <p>About:</p>
-                        <p>This project was an opportunity to work with API calls in vanilla javascript. Our orignal MVP was to create an API call to pair a meal with a varietal of wine chosen via drop down menu. We were able to further expand the project to include a second API call to pair a wine to a food from a typed text input.</p>
+                        <p class="projectAbout">This project was an opportunity to work with API calls in vanilla javascript. Our orignal MVP was to create an API call to pair a meal with a varietal of wine chosen via drop down menu. We were able to further expand the project to include a second API call to pair a wine to a food from a typed text input.</p>
                         <ul>
                             <li>
                                 <i class="fa-brands fa-square-js" sr-only="javascript icon" aria-hidden="true"></i>
@@ -319,7 +318,7 @@
                         </div>
                         <h3>Under the sea</h3>
                         <p>About:</p>
-                        <p>This project provided experience using Javascript to manipulate the DOM in order to create a functioning hamburger menu and image carousel on mobile screens on a feature brain. On the main starting branch, the focus was creating a multi-page website from a design with implementation of media queries for functionality on multiple screen sizes. During this project I used a mobile first design strategy, and manual drawing as no mobile design was provided.</p>
+                        <p class="projectAbout">This project provided experience using Javascript to manipulate the DOM in order to create a functioning hamburger menu and image carousel on mobile screens on a feature brain. On the main starting branch, the focus was creating a multi-page website from a design with implementation of media queries for functionality on multiple screen sizes. During this project I used a mobile first design strategy, and manual drawing as no mobile design was provided.</p>
                         <ul>
                             <li>
                                 <i class="fa-brands fa-square-js" sr-only="javascript icon" aria-hidden="true"></i>
@@ -345,7 +344,7 @@
                 </div>
             </div>
 
-            <button class="mobileHidden">Next</button>
+            <button class="nextButton">Next</button>
         </section>
         
         <section><!-- Contact Section ---------------------------------------------->
@@ -392,7 +391,7 @@
         </section>
         
         <section class="bgSecondary"><!-- Archive ---------------------------------->
-            <div class="wrapper">
+            <div class="wrapper archiveContainer">
                 <button class="archive">Archive</button>
                 <div class="archiveContent">
                     <p>This is a section of older projects to remind me of my coding journey, ordered by age</p>

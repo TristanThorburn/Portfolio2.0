@@ -69,8 +69,8 @@ nav{
     a{
         @include fontBasics;
         text-decoration: none;
-        // "20-36px"
-        font-size: clamp(1.25rem, 1.05rem + 1vw, 2.25rem);
+        // "12-18px"
+        font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
     }
 }
 
@@ -81,3 +81,22 @@ nav{
 .desktopNav.active{
     left:0;
 }
+
+@media (min-width:1023px){
+    .logo{
+        text-align:left;
+        margin-left:5%;
+        width:25%;
+    }
+    .desktopNav{
+        position:static;
+        display:flex;
+        border:none;
+
+        ul{
+            width:50%;
+            flex-direction:row;
+            justify-content: space-around;
+        }
+    }
+}   

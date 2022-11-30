@@ -1,0 +1,184 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@media (min-width:767px){
+// ABOUT ME SECTION-------------
+    .about{
+        h2{
+            padding-top:1.5rem;
+        }
+    }
+
+    .aboutUl{
+        gap:0;
+
+        li{
+            margin:1.5rem auto;
+        }
+    }
+// TECH STACK SECTION-----------
+    .techUl{
+        grid-template-columns:repeat(4, 1fr);
+    }
+// PROJECTS SECTION-------------
+    .projects{
+
+        h2{
+            margin:0 auto;
+        }
+    }
+
+    .slide{
+        margin-top:10%;
+    }
+// CONTACT SECTION--------------
+// ARCHIVE SECTION--------------
+}
+
+@media (min-width:1023px){
+// ABOUT SECTION-------------------
+    .about{
+        display:flex;
+        align-items: center;
+        gap:2rem;
+    }
+// TECK STACK SECTION--------------
+// PROJECTS SECTION----------------
+    .projects{
+        padding-bottom:1rem;
+
+        h2{
+            margin:0 auto;
+        }
+        i{
+            // 16-20px tablet only
+            font-size: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+        }
+        [src$='.svg']{
+            width: clamp(1rem, -0.4531rem + 2.2727vw, 1.25rem);
+        }
+    }
+    .slide{
+        display:grid;
+        grid-template-columns:0.4fr 0.6fr;
+        align-items: center;
+        margin:5rem auto 2.5rem;
+        position:relative;
+    }
+
+    .slide:after{
+        content:"";
+        border-bottom:2px solid $accentColor;
+        position: absolute;
+        width:60%;
+        bottom:-10%;
+        right:0%;
+    }
+
+    .projectImage{
+        cursor:default;
+        width:300px;
+        height:calc(300px / 1.618);
+        box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+    }
+
+    .projectImage:hover, .projectImage:focus{
+        border:none;
+        box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+    }
+
+    .projectImage:after{
+        display:none;
+    }
+    
+    .projectInfo{
+        max-height:none;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:0.5rem;
+
+        h3{
+            grid-row:1;
+            grid-column:1 / span 2;
+            // 22-26px tablet only
+            font-size: clamp(1.375rem, -0.0781rem + 2.2727vw, 1.625rem);
+            text-align:left;
+            margin-top:0;
+            margin-bottom:0;
+        }
+        ul{
+            grid-row:2;
+            grid-column:2 / span 2;
+            align-items:center;
+            justify-content: flex-end;
+            gap:1rem;
+            margin-top:0.5rem;
+            margin-bottom:0rem;
+        }
+        p{
+            margin-top:0;
+            margin-bottom:0;
+            // 12-16px tablet only
+            font-size: clamp(0.75rem, -0.7031rem + 2.2727vw, 1rem);
+        }
+    }
+
+    .projectLinks{
+        justify-content:flex-end;
+        a{
+            // 10-14px tablet only
+            font-size: clamp(0.625rem, -0.8281rem + 2.2727vw, 0.875rem);
+        }
+    }
+
+    .projectAbout{
+        grid-column:span 3;
+        grid-row: 3;
+    }
+
+    .partners{
+        grid-row:4;
+        grid-column:span 3;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+// CONTACT SECTION---------------------------------------------------------
+    form{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:1rem;
+        margin-bottom:2.5rem;
+    }
+
+    form div:nth-child(3){
+        grid-column:span 2;
+    }
+
+    .formButtons{
+        grid-column:span 2;
+    }
+
+    .formButtons, input, textarea{
+        margin-top:0;
+        margin-bottom:0;
+    }
+// ARCHIVE SECTION------------------------
+    .archiveContainer{
+        @include flexColCen;
+    }
+    .archive{
+        width:66%;
+    }
+
+
+
+
+
+
+
+
+}

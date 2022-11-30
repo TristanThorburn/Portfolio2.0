@@ -43,7 +43,7 @@ projects.app = () => {
 
     projectImage.forEach(project => {
         project.addEventListener('click', (e) => {
-            if(window.innerWidth < 1200){
+            if(window.innerWidth < 1023){
                 project.classList.toggle('active');
                 
                     const projectDetails = e.target.parentNode.nextElementSibling;

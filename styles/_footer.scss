@@ -23,4 +23,12 @@ footer{
     transition: all 1s;
 }
 
+@media(min-width:1023px){
+    footer{
+        i{
+            // 30-40px tablet only
+            font-size: clamp(1.875rem, -1.7578rem + 5.6818vw, 2.5rem);
+        }
+    }
+}
 
