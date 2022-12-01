@@ -2,7 +2,8 @@
 const cleanUp = {};
 
 cleanUp.schedule = () => {
-    outPut = document.querySelector(".desktopDescription");
+    const outPut = document.querySelector('.desktopDescription');
+
     document.addEventListener("scroll", () => {
         if(window.innerWidth < 1619 && outPut.childNodes.length > 0){
             outPut.innerHTML = "";
@@ -68,7 +69,6 @@ logoDesktop.app = () => {
         window.addEventListener('resize', () => {
             if(window.innerWidth > 1400){
                 logo.innerHTML = newLogoHTML;
-                console.log(logo.innerHTML)
             } else{
                 logo.innerHTML = oldLogoHTML;
             }
@@ -95,22 +95,16 @@ projects.app = () => {
         if(window.innerWidth >= 1619){
             slide.style.transform = `translateX(${index * 100}%)`;
         }
+        else{
+            window.onresize = () => {
+                if(window.innerWidth < 1619){
+                    slides.forEach(slide => {
+                        slide.removeAttribute('style');
+                    });
+                }
+            }
+        }
     });
-
-    // slides.positioning = () => {
-    //     window.onresize = () => {
-    //         if(window.innerWidth < 1619){
-    //             slides.forEach(slide => {
-    //                 slide.removeAttribute('style');
-    //             });
-    //         }
-    //         else if(window.innerWidth >= 1619){
-    //             slides.forEach((slide, index) => {
-    //                     slide.style.transform = `translateX(${index * 100}%)`
-    //             });
-    //         }
-    //     }
-    // }
 
     slides.nextSlide.addEventListener('click', () => {
         if(slides.currentSlide === slides.maxSlide){
@@ -142,8 +136,8 @@ projects.app = () => {
         project.addEventListener('click', (e) => {
             if(window.innerWidth < 1023){
                 project.classList.toggle('active');
-                
-                    const projectDetails = e.target.parentNode.nextElementSibling;
+
+                const projectDetails = e.target.parentNode.nextElementSibling;          
 
                     if(e.target.parentNode.classList.contains("active")){
                         projectDetails.style.maxHeight = projectDetails.scrollHeight + "px";
@@ -152,10 +146,19 @@ projects.app = () => {
                         projectDetails.style.maxHeight = 0;
                     }
             }
-            else{
-                project.removeEventListener("click", e);
-            }
         });
+    });
+    
+    window.addEventListener('resize', () => {
+        if(window.innerWidth >= 1022  && window.innerWidth <= 1619){
+            projectImage.forEach(project => {
+                project.classList.remove('active');
+                project.nextElementSibling.removeAttribute('style');
+            });
+            slides.forEach(slide => {
+                slide.removeAttribute('style');
+            })
+        }
     });
 }
 

@@ -301,6 +301,9 @@
         display:flex;
         flex-direction: column;
         gap:0;
+        box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
 
         .projectInfo{
             max-height:0;

@@ -550,6 +550,7 @@ h1 {
 }
 .projects [src$=".svg"] {
   width: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+  height: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
 }
 
 .prevButton, .nextButton {
@@ -973,6 +974,9 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     display: flex;
     flex-direction: column;
     gap: 0;
+    box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
   }
   .slide .projectInfo {
     max-height: 0;

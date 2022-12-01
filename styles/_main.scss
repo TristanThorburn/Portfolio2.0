@@ -51,6 +51,7 @@
     }
     [src$='.svg']{
         width: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+        height: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
     }
 }
 
