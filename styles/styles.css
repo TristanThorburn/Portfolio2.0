@@ -501,6 +501,9 @@ h1 {
   }
 }
 @media (min-width: 1199px) {
+  header {
+    height: 80vh;
+  }
   .h1Container {
     max-width: 50%;
   }
