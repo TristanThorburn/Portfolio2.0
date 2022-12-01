@@ -85,6 +85,58 @@ const projects = {};
 
 projects.app = () => {
     const projectImage = document.querySelectorAll('.projectImage');
+    const slides = document.querySelectorAll('.slide');
+    slides.currentSlide = 0;
+    slides.maxSlide = slides.length -1;
+    slides.nextSlide = document.querySelector('.nextButton');
+    slides.prevSlide = document.querySelector('.prevButton');
+
+    slides.forEach((slide, index) => {
+        if(window.innerWidth >= 1619){
+            slide.style.transform = `translateX(${index * 100}%)`;
+        }
+    });
+
+    // slides.positioning = () => {
+    //     window.onresize = () => {
+    //         if(window.innerWidth < 1619){
+    //             slides.forEach(slide => {
+    //                 slide.removeAttribute('style');
+    //             });
+    //         }
+    //         else if(window.innerWidth >= 1619){
+    //             slides.forEach((slide, index) => {
+    //                     slide.style.transform = `translateX(${index * 100}%)`
+    //             });
+    //         }
+    //     }
+    // }
+
+    slides.nextSlide.addEventListener('click', () => {
+        if(slides.currentSlide === slides.maxSlide){
+            slides.currentSlide = 0;
+        }
+        else{
+            slides.currentSlide ++;
+        }
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * (index - slides.currentSlide)}%)`
+        });
+    });
+
+    slides.prevSlide.addEventListener('click', () => {
+        if(slides.currentSlide === 0){
+            slides.currentSlide = slides.maxSlide;
+        }
+        else{
+            slides.currentSlide --;
+        }
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * (index - slides.currentSlide)}%)`
+        });
+    });
 
     projectImage.forEach(project => {
         project.addEventListener('click', (e) => {
