@@ -974,9 +974,6 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     display: flex;
     flex-direction: column;
     gap: 0;
-    box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
   }
   .slide .projectInfo {
     max-height: 0;
@@ -986,12 +983,19 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   .slide .projectImage {
     width: 100%;
     height: auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
   }
   .slide img {
     height: auto;
   }
   .desktopDescription {
-    padding-top: clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+    width: 60vw;
+    padding-bottom: clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+  }
+  .desktopDescription .projectInfo {
+    border-bottom: none;
   }
   form {
     width: 50vw;

@@ -301,9 +301,6 @@
         display:flex;
         flex-direction: column;
         gap:0;
-        box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23,0.75);
 
         .projectInfo{
             max-height:0;
@@ -313,6 +310,9 @@
         .projectImage{
             width:100%;
             height:auto;
+            box-shadow:none;
+            -webkit-box-shadow:none;
+            -moz-box-shadow:none;
         }
         img{
             height:auto;
@@ -321,7 +321,12 @@
 
     .desktopDescription{
         // 10-20px > 1620w
-        padding-top:clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+        width:60vw;
+        padding-bottom:clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+
+        .projectInfo{
+            border-bottom:none;
+        }
     }
 // CONTACT SECTION-----------------
     form{

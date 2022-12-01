@@ -85,6 +85,7 @@ const projects = {};
 
 projects.app = () => {
     const projectImage = document.querySelectorAll('.projectImage');
+    const outPut = document.querySelector('.desktopDescription');
     const slides = document.querySelectorAll('.slide');
     slides.currentSlide = 0;
     slides.maxSlide = slides.length -1;
@@ -146,18 +147,30 @@ projects.app = () => {
                         projectDetails.style.maxHeight = 0;
                     }
             }
+            if(window.innerWidth > 1619){
+                const projectDetails = e.target.parentNode.nextElementSibling;
+                const clone = projectDetails.cloneNode(true);
+                if(outPut.childNodes.length > 0){
+                    outPut.innerHTML = '';
+                }
+                else {
+                    outPut.appendChild(clone);
+                }
+            }
         });
     });
     
     window.addEventListener('resize', () => {
+        const slides = document.querySelectorAll('.slide');
         if(window.innerWidth >= 1022  && window.innerWidth <= 1619){
             projectImage.forEach(project => {
                 project.classList.remove('active');
                 project.nextElementSibling.removeAttribute('style');
-            });
+            })
             slides.forEach(slide => {
                 slide.removeAttribute('style');
             })
+            outPut.innerHTML = '';
         }
     });
 }
