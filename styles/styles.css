@@ -550,6 +550,7 @@ h1 {
 }
 .projects [src$=".svg"] {
   width: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
+  height: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
 }
 
 .prevButton, .nextButton {
@@ -945,17 +946,14 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   }
   .slideContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
-    min-height: 40vh;
+    justify-content: center;
     margin: 2.5% auto;
   }
   .slideButtonContainer {
     display: flex;
     justify-content: center;
-  }
-  .projects .projectInfo {
-    display: none;
   }
   .prevButton, .nextButton {
     display: block;
@@ -963,20 +961,41 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   }
   .slideTrack {
     position: relative;
-    left: 12.5%;
-    top: -38%;
-    transform: translateY(-50%);
+    min-height: 370.8281829419px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .slide {
-    margin: 0 auto;
+    margin: auto;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
-  .projectImage {
-    max-width: 600px;
-    max-height: 370.8281829419px;
+  .slide .projectInfo {
+    max-height: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+  .slide .projectImage {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  .slide img {
+    height: auto;
   }
   .desktopDescription {
-    padding-top: clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+    width: 60vw;
+    padding-bottom: clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+  }
+  .desktopDescription .projectInfo {
+    border-bottom: none;
   }
   form {
     width: 50vw;

@@ -271,19 +271,15 @@
 
     .slideContainer{
         display:grid;
-        grid-template-columns:1fr 2fr 1fr;
+        grid-template-columns:1fr 1.5fr 1fr;
         align-items: center;
-        min-height:40vh;
+        justify-content: center;
         margin:2.5% auto;
     }
 
     .slideButtonContainer{
         display:flex;
         justify-content: center;
-    }
-
-    .projects .projectInfo{
-        display:none;
     }
 
     .prevButton, .nextButton{
@@ -293,24 +289,44 @@
 
     .slideTrack{
         position:relative;
-        left:12.5%;
-        top:-38%;
-        transform:translateY(-50%);
+        min-height:calc(600px / 1.618);
+        overflow:hidden;
+        @include flexColCen;
+        justify-content:center;
     }
 
     .slide{
-        margin:0 auto;
+        margin:auto;
         position: absolute;
-    }
+        display:flex;
+        flex-direction: column;
+        gap:0;
 
-    .projectImage{
-        max-width:600px;
-        max-height:calc(600px / 1.618);
+        .projectInfo{
+            max-height:0;
+            padding:0;
+            border-bottom:none;
+        }
+        .projectImage{
+            width:100%;
+            height:auto;
+            box-shadow:none;
+            -webkit-box-shadow:none;
+            -moz-box-shadow:none;
+        }
+        img{
+            height:auto;
+        }
     }
 
     .desktopDescription{
         // 10-20px > 1620w
-        padding-top:clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+        width:60vw;
+        padding-bottom:clamp(0.625rem, 0.1996rem + 0.4202vw, 1.25rem);
+
+        .projectInfo{
+            border-bottom:none;
+        }
     }
 // CONTACT SECTION-----------------
     form{

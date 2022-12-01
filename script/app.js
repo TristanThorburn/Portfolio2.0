@@ -2,7 +2,8 @@
 const cleanUp = {};
 
 cleanUp.schedule = () => {
-    outPut = document.querySelector(".desktopDescription");
+    const outPut = document.querySelector('.desktopDescription');
+
     document.addEventListener("scroll", () => {
         if(window.innerWidth < 1619 && outPut.childNodes.length > 0){
             outPut.innerHTML = "";
@@ -68,7 +69,6 @@ logoDesktop.app = () => {
         window.addEventListener('resize', () => {
             if(window.innerWidth > 1400){
                 logo.innerHTML = newLogoHTML;
-                console.log(logo.innerHTML)
             } else{
                 logo.innerHTML = oldLogoHTML;
             }
@@ -85,13 +85,60 @@ const projects = {};
 
 projects.app = () => {
     const projectImage = document.querySelectorAll('.projectImage');
+    const outPut = document.querySelector('.desktopDescription');
+    const slides = document.querySelectorAll('.slide');
+    slides.currentSlide = 0;
+    slides.maxSlide = slides.length -1;
+    slides.nextSlide = document.querySelector('.nextButton');
+    slides.prevSlide = document.querySelector('.prevButton');
+
+    slides.forEach((slide, index) => {
+        if(window.innerWidth >= 1619){
+            slide.style.transform = `translateX(${index * 100}%)`;
+        }
+        else{
+            window.onresize = () => {
+                if(window.innerWidth < 1619){
+                    slides.forEach(slide => {
+                        slide.removeAttribute('style');
+                    });
+                }
+            }
+        }
+    });
+
+    slides.nextSlide.addEventListener('click', () => {
+        if(slides.currentSlide === slides.maxSlide){
+            slides.currentSlide = 0;
+        }
+        else{
+            slides.currentSlide ++;
+        }
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * (index - slides.currentSlide)}%)`
+        });
+    });
+
+    slides.prevSlide.addEventListener('click', () => {
+        if(slides.currentSlide === 0){
+            slides.currentSlide = slides.maxSlide;
+        }
+        else{
+            slides.currentSlide --;
+        }
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * (index - slides.currentSlide)}%)`
+        });
+    });
 
     projectImage.forEach(project => {
         project.addEventListener('click', (e) => {
             if(window.innerWidth < 1023){
                 project.classList.toggle('active');
-                
-                    const projectDetails = e.target.parentNode.nextElementSibling;
+
+                const projectDetails = e.target.parentNode.nextElementSibling;          
 
                     if(e.target.parentNode.classList.contains("active")){
                         projectDetails.style.maxHeight = projectDetails.scrollHeight + "px";
@@ -100,10 +147,31 @@ projects.app = () => {
                         projectDetails.style.maxHeight = 0;
                     }
             }
-            else{
-                project.removeEventListener("click", e);
+            if(window.innerWidth > 1619){
+                const projectDetails = e.target.parentNode.nextElementSibling;
+                const clone = projectDetails.cloneNode(true);
+                if(outPut.childNodes.length > 0){
+                    outPut.innerHTML = '';
+                }
+                else {
+                    outPut.appendChild(clone);
+                }
             }
         });
+    });
+    
+    window.addEventListener('resize', () => {
+        const slides = document.querySelectorAll('.slide');
+        if(window.innerWidth >= 1022  && window.innerWidth <= 1619){
+            projectImage.forEach(project => {
+                project.classList.remove('active');
+                project.nextElementSibling.removeAttribute('style');
+            })
+            slides.forEach(slide => {
+                slide.removeAttribute('style');
+            })
+            outPut.innerHTML = '';
+        }
     });
 }
 
