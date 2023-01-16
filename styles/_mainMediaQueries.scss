@@ -28,6 +28,10 @@
         }
     }
 
+    .projectImage{
+        cursor:pointer;
+    }
+
     .slide{
         margin-top:10%;
     }
@@ -86,7 +90,6 @@
     }
 
     .projectImage{
-        cursor:default;
         width:30vw;
         height:calc(30vw / 1.618);
         box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
