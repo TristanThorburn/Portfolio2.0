@@ -126,9 +126,12 @@
         justify-content: space-evenly;
         color:$accentColor;
     }
-    strong, a{
+    a{
         color:$accentColor;
         text-decoration: none;
+    }
+    strong{
+        color:$linkedin;
     }
 }
 
@@ -136,6 +139,10 @@
     display:flex;
     flex-direction: column;
     align-items: flex-start;
+
+    a{
+        color:$linkedin;
+    }
 }
 // CONTACT SECTION-----------------
 .contact{
@@ -201,13 +208,21 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
         color:$textPrimary;
         padding-top:1rem;
     }
+    a.archiveProjectTitle{
+        text-transform: uppercase;
+    }
     a{
         text-decoration:none;
         font-family:dizhitl;
         color:$accentColor;
     }
+    .partners{
+        a{
+            color:$linkedin;
+        }
+    }
 
-    ul li:nth-child(-n+3){
+    ul li:nth-child(-n+4){
         border-bottom:2px solid $accentColor;
     }
 }

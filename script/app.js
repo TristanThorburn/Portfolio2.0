@@ -110,9 +110,17 @@ projects.app = () => {
     slides.nextSlide.addEventListener('click', () => {
         if(slides.currentSlide === slides.maxSlide){
             slides.currentSlide = 0;
+
+            if(outPut.childNodes.length > 0){
+                outPut.innerHTML = '';
+            }
         }
         else{
             slides.currentSlide ++;
+            
+            if(outPut.childNodes.length > 0){
+                outPut.innerHTML = '';
+            }
         }
 
         slides.forEach((slide, index) => {
@@ -123,9 +131,18 @@ projects.app = () => {
     slides.prevSlide.addEventListener('click', () => {
         if(slides.currentSlide === 0){
             slides.currentSlide = slides.maxSlide;
+            
+            if(outPut.childNodes.length > 0){
+                outPut.innerHTML = '';
+            }
         }
         else{
             slides.currentSlide --;
+            
+            if(outPut.childNodes.length > 0){
+                console.log(outPut.childNodes.length)
+                outPut.innerHTML = '';
+            }
         }
 
         slides.forEach((slide, index) => {

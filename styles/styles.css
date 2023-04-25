@@ -626,15 +626,21 @@ h1 {
   justify-content: space-evenly;
   color: hsl(101, 77%, 40%);
 }
-.projectInfo strong, .projectInfo a {
+.projectInfo a {
   color: hsl(101, 77%, 40%);
   text-decoration: none;
+}
+.projectInfo strong {
+  color: hsl(201, 100%, 35%);
 }
 
 .partners {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.partners a {
+  color: hsl(201, 100%, 35%);
 }
 
 .contact h2 {
@@ -698,12 +704,18 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   color: hsl(0, 0%, 100%);
   padding-top: 1rem;
 }
+.archiveContent a.archiveProjectTitle {
+  text-transform: uppercase;
+}
 .archiveContent a {
   text-decoration: none;
   font-family: dizhitl;
   color: hsl(101, 77%, 40%);
 }
-.archiveContent ul li:nth-child(-n+3) {
+.archiveContent .partners a {
+  color: hsl(201, 100%, 35%);
+}
+.archiveContent ul li:nth-child(-n+4) {
   border-bottom: 2px solid hsl(101, 77%, 40%);
 }
 
