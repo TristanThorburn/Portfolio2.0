@@ -11,10 +11,11 @@ nav{
     top:5px;
     left:2.5px;
     height:40px;
-    width:40px;
+    width:50px;
     border-radius: 5px;
     z-index: 10;
     background-color:$bgSecondary;  
+    border:1px solid $accentColor;
 }
 
 .hamburger.active :nth-child(1){

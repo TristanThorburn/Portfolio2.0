@@ -210,6 +210,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     }
     a.archiveProjectTitle{
         text-transform: uppercase;
+        position: relative;
     }
     a{
         text-decoration:none;
@@ -225,6 +226,17 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     ul li:nth-child(-n+4){
         border-bottom:2px solid $accentColor;
     }
+}
+
+
+.archiveProjectTitle:after{
+    content:'\f25a';
+    font-family:'Font Awesome 5 Free';
+    font-weight:900;
+    color:$textPrimary;
+    position:absolute;
+    bottom:-5px;
+    right:-20px;
 }
 
 .eggy{

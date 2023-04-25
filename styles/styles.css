@@ -335,10 +335,11 @@ nav {
   top: 5px;
   left: 2.5px;
   height: 40px;
-  width: 40px;
+  width: 50px;
   border-radius: 5px;
   z-index: 10;
   background-color: hsl(0, 0%, 12%);
+  border: 1px solid hsl(101, 77%, 40%);
 }
 
 .hamburger.active :nth-child(1) {
@@ -706,6 +707,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 }
 .archiveContent a.archiveProjectTitle {
   text-transform: uppercase;
+  position: relative;
 }
 .archiveContent a {
   text-decoration: none;
@@ -717,6 +719,16 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 }
 .archiveContent ul li:nth-child(-n+4) {
   border-bottom: 2px solid hsl(101, 77%, 40%);
+}
+
+.archiveProjectTitle:after {
+  content: "\f25a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  bottom: -5px;
+  right: -20px;
 }
 
 .eggy {
