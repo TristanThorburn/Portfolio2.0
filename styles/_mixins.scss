@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 @mixin T {
-    color:$accentColor;
+    color:$textPrimary;
 }
 @mixin ristan {
     color:$textPrimary;

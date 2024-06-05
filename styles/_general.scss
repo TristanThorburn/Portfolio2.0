@@ -38,9 +38,9 @@ h2:after{
     left:33%
 }
 
-span{
-    color:$accentColor;
-}
+// span{
+//     color:$accentColor;
+// }
 
 p{
     font-family:dizhitl;
@@ -87,7 +87,7 @@ i{
     // 20-26px
     font-size: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
     letter-spacing:1.25px;
-    color:gold;
+    color:#009ffd;
 }
 
 @media (min-width:1023px){
