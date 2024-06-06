@@ -240,17 +240,17 @@ html {
 }
 
 body {
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(184, 71%, 20%);
 }
 
 .bgSecondary {
-  background-color: hsl(0, 0%, 12%);
+  background-color: hsl(199, 71%, 15%);
 }
 
 h2 {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   text-align: center;
   line-height: 1.2;
   letter-spacing: 1.2px;
@@ -261,20 +261,16 @@ h2 {
 
 h2:after {
   content: "";
-  border-bottom: 2px solid hsl(101, 77%, 40%);
+  border-bottom: 2px solid hsl(202, 100%, 50%);
   position: absolute;
   width: 33%;
   bottom: -10%;
   left: 33%;
 }
 
-span {
-  color: hsl(101, 77%, 40%);
-}
-
 p {
   font-family: dizhitl;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   line-height: 1.5;
 }
 
@@ -286,14 +282,14 @@ img {
 [src$=".svg"] {
   width: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
   height: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
-  filter: invert(76%) sepia(37%) saturate(5601%) hue-rotate(58deg) brightness(89%) contrast(86%);
+  filter: invert(46%) sepia(59%) saturate(2826%) hue-rotate(175deg) brightness(100%) contrast(102%);
 }
 
 i {
   font-size: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
 }
 
-.fa-linkedin, .fa-file {
+.fa-linkedin, .fa-file-pdf {
   color: hsl(201, 100%, 35%);
 }
 
@@ -306,7 +302,7 @@ i {
 }
 
 .fa-github {
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
 }
 
 .scrambled {
@@ -314,7 +310,7 @@ i {
   text-transform: uppercase;
   font-size: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
   letter-spacing: 1.25px;
-  color: gold;
+  color: hsl(12, 29%, 77%);
 }
 
 @media (min-width: 1023px) {
@@ -326,7 +322,7 @@ i {
   }
 }
 nav {
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(184, 71%, 20%);
   position: relative;
 }
 
@@ -338,8 +334,8 @@ nav {
   width: 50px;
   border-radius: 5px;
   z-index: 10;
-  background-color: hsl(0, 0%, 12%);
-  border: 1px solid hsl(101, 77%, 40%);
+  background-color: hsl(199, 71%, 15%);
+  border: 1px solid hsl(202, 100%, 50%);
 }
 
 .hamburger.active :nth-child(1) {
@@ -356,7 +352,7 @@ nav {
 
 .bar {
   display: block;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(38, 100%, 98%);
   width: 30px;
   height: 5px;
   margin: 6px auto;
@@ -365,7 +361,7 @@ nav {
 }
 
 .logo {
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   font-family: dizhitl;
   text-align: center;
   font-size: clamp(1.625rem, 0.1719rem + 2.2727vw, 1.875rem);
@@ -373,18 +369,18 @@ nav {
 }
 
 .logoT {
-  color: hsl(101, 77%, 40%);
+  color: hsl(38, 100%, 98%);
 }
 
 .desktopNav {
   position: fixed;
-  background-color: hsl(0, 0%, 12%);
+  background-color: hsl(199, 71%, 15%);
   width: 100%;
   top: 0%;
   left: 100%;
   transition: all 1s;
   z-index: 1;
-  border: 2px solid hsl(101, 77%, 40%);
+  border: 2px solid hsl(202, 100%, 50%);
 }
 .desktopNav ul {
   display: flex;
@@ -400,13 +396,13 @@ nav {
 .desktopNav a {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   text-decoration: none;
   font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
 }
 
 .desktopNav a:hover {
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
 }
 
 .desktopNav.active {
@@ -435,7 +431,7 @@ nav {
   }
 }
 header {
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(184, 71%, 20%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,7 +444,7 @@ header h2:after {
 h1 {
   font-family: dizhitl;
   text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   text-align: center;
   line-height: 1.2;
   margin-top: 50%;
@@ -461,9 +457,9 @@ h1 {
   transform: rotate(45deg);
   overflow: hidden;
   width: 60vw;
-  box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
-  -webkit-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
-  -moz-box-shadow: 10px -10px 9px 0px rgba(73, 181, 23, 0.75);
+  box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
+  -webkit-box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
+  -moz-box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
 }
 
 .headshot img {
@@ -539,8 +535,11 @@ h1 {
 .techUl p {
   font-size: clamp(0.75rem, 0.45rem + 1.5vw, 2.25rem);
 }
+.techUl .responsiveDesign {
+  font-size: clamp(0.75rem, 0.4615rem + 1.2821vw, 2rem);
+}
 .techUl i {
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
 }
 
 .projects {
@@ -566,9 +565,9 @@ h1 {
 }
 
 .projectImage {
-  box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-  -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-  -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
@@ -578,7 +577,7 @@ h1 {
   content: "\f25a";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   position: absolute;
   bottom: 0;
 }
@@ -587,7 +586,7 @@ h1 {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  border: 5px solid hsl(101, 77%, 40%);
+  border: 5px solid hsl(202, 100%, 50%);
 }
 
 .projectLinks {
@@ -603,7 +602,7 @@ h1 {
   text-transform: uppercase;
 }
 .projectLinks a {
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
 }
 
 .projectInfo {
@@ -612,7 +611,7 @@ h1 {
   transition: 1s ease-out;
 }
 .projectInfo h3 {
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   text-transform: capitalize;
   font-family: dizhitl;
   font-size: clamp(1.125rem, 0.875rem + 1.875vw, 3.125rem);
@@ -625,14 +624,14 @@ h1 {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: space-evenly;
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
 }
 .projectInfo a {
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
   text-decoration: none;
 }
 .projectInfo strong {
-  color: hsl(201, 100%, 35%);
+  color: hsl(202, 100%, 50%);
 }
 
 .partners {
@@ -641,7 +640,7 @@ h1 {
   align-items: flex-start;
 }
 .partners a {
-  color: hsl(201, 100%, 35%);
+  color: hsl(12, 29%, 77%);
 }
 
 .contact h2 {
@@ -682,7 +681,7 @@ button {
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:focus {
-  border: 5px solid hsl(101, 77%, 40%);
+  border: 5px solid hsl(202, 100%, 50%);
   outline: none;
 }
 
@@ -702,7 +701,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   list-style: none;
 }
 .archiveContent li {
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   padding-top: 1rem;
 }
 .archiveContent a.archiveProjectTitle {
@@ -712,20 +711,20 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 .archiveContent a {
   text-decoration: none;
   font-family: dizhitl;
-  color: hsl(101, 77%, 40%);
+  color: hsl(202, 100%, 50%);
 }
 .archiveContent .partners a {
-  color: hsl(201, 100%, 35%);
+  color: hsl(12, 29%, 77%);
 }
 .archiveContent ul li:nth-child(-n+4) {
-  border-bottom: 2px solid hsl(101, 77%, 40%);
+  border-bottom: 2px solid hsl(202, 100%, 50%);
 }
 
 .archiveProjectTitle:after {
   content: "\f25a";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: hsl(0, 0%, 100%);
+  color: hsl(38, 100%, 98%);
   position: absolute;
   bottom: -5px;
   right: -20px;
@@ -736,22 +735,22 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   padding-bottom: 1.5rem;
 }
 .eggy img {
-  box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
-  -webkit-box-shadow: 0px 10px 9px 0px rgba(255, 215, 0, 0.75);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(255, 215, 0, 0.75);
+  box-shadow: 0px 10px 9px 0px hsl(12, 29%, 77%);
+  -webkit-box-shadow: 0px 10px 9px 0px hsl(12, 29%, 77%);
+  -moz-box-shadow: 0px 5px 10px 0px hsl(12, 29%, 77%);
 }
 .eggy img:hover, .eggy img:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  border: 5px solid gold;
+  border: 5px solid hsl(12, 29%, 77%);
 }
 .eggy a {
-  color: gold;
+  color: rgb(213, 185, 178);
 }
 .eggy i {
   font-size: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
-  color: gold;
+  color: hsl(12, 29%, 77%);
 }
 
 .eggInfo {
@@ -824,15 +823,15 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   .projectImage {
     width: 30vw;
     height: 18.5414091471vw;
-    box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -webkit-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -moz-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
   }
   .projectImage:hover, .projectImage:focus {
     border: none;
-    box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -webkit-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -moz-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
   }
   .projectImage:after {
     display: none;
@@ -843,7 +842,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 2px solid hsl(101, 77%, 40%);
+    border-bottom: 2px solid hsl(202, 100%, 50%);
   }
   .projectInfo h3 {
     grid-row: 1;
@@ -1016,6 +1015,9 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
   }
+  .slide .projectImage:hover, .slide .projectImage:focus {
+    border: 5px solid hsl(202, 100%, 50%);
+  }
   .slide img {
     height: auto;
   }
@@ -1041,13 +1043,18 @@ footer p {
 }
 
 .bottomT {
-  color: hsl(101, 77%, 40%);
+  color: hsl(12, 29%, 77%);
   font-family: dizhitl;
   text-align: center;
   font-size: clamp(2.25rem, 2.175rem + 0.375vw, 2.625rem);
   margin: 0 auto;
-  cursor: pointer;
   transition: all 1s;
+}
+.bottomT span {
+  cursor: pointer;
+}
+.bottomT span:hover, .bottomT span:focus {
+  color: hsl(202, 100%, 50%);
 }
 
 @media (min-width: 1023px) {

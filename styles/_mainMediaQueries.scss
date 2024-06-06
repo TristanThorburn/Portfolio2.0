@@ -92,16 +92,16 @@
     .projectImage{
         width:30vw;
         height:calc(30vw / 1.618);
-        box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        box-shadow: -10px 5px 9px 0px $accentColor;
+        -webkit-box-shadow: -10px 5px 9px 0px $accentColor;
+        -moz-box-shadow: -10px 5px 9px 0px $accentColor;
     }
 
     .projectImage:hover, .projectImage:focus{
         border:none;
-        box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
-        -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23,0.75);
+        box-shadow: -10px 5px 9px 0px $accentColor;
+        -webkit-box-shadow: -10px 5px 9px 0px $accentColor;
+        -moz-box-shadow: -10px 5px 9px 0px $accentColor;
     }
 
     .projectImage:after{
@@ -316,6 +316,9 @@
             box-shadow:none;
             -webkit-box-shadow:none;
             -moz-box-shadow:none;
+        }
+        .projectImage:hover, .projectImage:focus{
+            border:5px solid $accentColor;
         }
         img{
             height:auto;
