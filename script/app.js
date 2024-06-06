@@ -206,10 +206,10 @@ archive.app = () => {
     const eggProject = document.querySelector('.egg');
     const eggImage = eggProject.children[1].children[0];
     const eggDetails = eggProject.children[1].children[1];
-    const trigger = document.querySelector('.bottomT');
+    const trigger = document.querySelector('.eggButton');
 
     trigger.addEventListener('click', (e) => {
-        const hint = e.target.nextElementSibling;
+        const hint = e.target.parentElement.nextElementSibling;
         hint.classList.toggle('eggHunt');
         eggProject.classList.toggle('eggHunt');
 
