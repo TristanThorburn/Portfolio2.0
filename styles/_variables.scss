@@ -1,13 +1,15 @@
 $bgPrimary:hsl(184, 71%, 20%);
 $bgSecondary:hsl(199, 71%, 15%);
 $textPrimary:hsl(38, 100%, 98%);
-$accentColor:hsl(12, 29%, 77%);
+$accentColor:hsl(202, 100%, 50%);
+$textSecondary:	hsl(12, 29%, 77%);
 
+// Linkedin Color also used for resume pdf
 $linkedin:hsl(201, 100%, 35%);
 $spotify:hsl(141, 73%, 42%);
 $steam:hsl(206, 99%, 41%);
 
 // This is to change the REST APIs icon color:
-$accentFilter:invert(88%) sepia(2%) saturate(3412%) hue-rotate(318deg) brightness(96%) contrast(74%);
+$accentFilter:invert(46%) sepia(59%) saturate(2826%) hue-rotate(175deg) brightness(100%) contrast(102%);
 
 $primaryFontFam:dizhitl;

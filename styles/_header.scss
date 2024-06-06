@@ -26,9 +26,9 @@ h1{
     transform: rotate(45deg);
     overflow:hidden;
     width: 60vw;
-    box-shadow: 10px -10px 9px 0px rgba(213, 185, 178, 1);
-    -webkit-box-shadow: 10px -10px 9px 0px rgba(213, 185, 178, 1);
-    -moz-box-shadow: 10px -10px 9px 0px rgba(213, 185, 178, 1);
+    box-shadow: 10px -10px 9px 0px $accentColor;
+    -webkit-box-shadow: 10px -10px 9px 0px $accentColor;
+    -moz-box-shadow: 10px -10px 9px 0px $accentColor;
 }
 
 .headshot img{

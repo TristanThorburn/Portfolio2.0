@@ -261,7 +261,7 @@ h2 {
 
 h2:after {
   content: "";
-  border-bottom: 2px solid hsl(12, 29%, 77%);
+  border-bottom: 2px solid hsl(202, 100%, 50%);
   position: absolute;
   width: 33%;
   bottom: -10%;
@@ -282,14 +282,14 @@ img {
 [src$=".svg"] {
   width: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
   height: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
-  filter: invert(88%) sepia(2%) saturate(3412%) hue-rotate(318deg) brightness(96%) contrast(74%);
+  filter: invert(46%) sepia(59%) saturate(2826%) hue-rotate(175deg) brightness(100%) contrast(102%);
 }
 
 i {
   font-size: clamp(2.5rem, 2.375rem + 0.625vw, 3.125rem);
 }
 
-.fa-linkedin, .fa-file {
+.fa-linkedin, .fa-file-pdf {
   color: hsl(201, 100%, 35%);
 }
 
@@ -310,7 +310,7 @@ i {
   text-transform: uppercase;
   font-size: clamp(1.25rem, 1.175rem + 0.375vw, 1.625rem);
   letter-spacing: 1.25px;
-  color: #009ffd;
+  color: hsl(12, 29%, 77%);
 }
 
 @media (min-width: 1023px) {
@@ -335,7 +335,7 @@ nav {
   border-radius: 5px;
   z-index: 10;
   background-color: hsl(199, 71%, 15%);
-  border: 1px solid hsl(12, 29%, 77%);
+  border: 1px solid hsl(202, 100%, 50%);
 }
 
 .hamburger.active :nth-child(1) {
@@ -380,7 +380,7 @@ nav {
   left: 100%;
   transition: all 1s;
   z-index: 1;
-  border: 2px solid hsl(12, 29%, 77%);
+  border: 2px solid hsl(202, 100%, 50%);
 }
 .desktopNav ul {
   display: flex;
@@ -402,7 +402,7 @@ nav {
 }
 
 .desktopNav a:hover {
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
 }
 
 .desktopNav.active {
@@ -457,9 +457,9 @@ h1 {
   transform: rotate(45deg);
   overflow: hidden;
   width: 60vw;
-  box-shadow: 10px -10px 9px 0px rgb(213, 185, 178);
-  -webkit-box-shadow: 10px -10px 9px 0px rgb(213, 185, 178);
-  -moz-box-shadow: 10px -10px 9px 0px rgb(213, 185, 178);
+  box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
+  -webkit-box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
+  -moz-box-shadow: 10px -10px 9px 0px hsl(202, 100%, 50%);
 }
 
 .headshot img {
@@ -535,8 +535,11 @@ h1 {
 .techUl p {
   font-size: clamp(0.75rem, 0.45rem + 1.5vw, 2.25rem);
 }
+.techUl .responsiveDesign {
+  font-size: clamp(0.75rem, 0.4615rem + 1.2821vw, 2rem);
+}
 .techUl i {
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
 }
 
 .projects {
@@ -562,9 +565,9 @@ h1 {
 }
 
 .projectImage {
-  box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-  -webkit-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-  -moz-box-shadow: 10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
@@ -583,7 +586,7 @@ h1 {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  border: 5px solid hsl(12, 29%, 77%);
+  border: 5px solid hsl(202, 100%, 50%);
 }
 
 .projectLinks {
@@ -599,7 +602,7 @@ h1 {
   text-transform: uppercase;
 }
 .projectLinks a {
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
 }
 
 .projectInfo {
@@ -621,14 +624,14 @@ h1 {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: space-evenly;
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
 }
 .projectInfo a {
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
   text-decoration: none;
 }
 .projectInfo strong {
-  color: hsl(201, 100%, 35%);
+  color: hsl(202, 100%, 50%);
 }
 
 .partners {
@@ -637,7 +640,7 @@ h1 {
   align-items: flex-start;
 }
 .partners a {
-  color: hsl(201, 100%, 35%);
+  color: hsl(12, 29%, 77%);
 }
 
 .contact h2 {
@@ -678,7 +681,7 @@ button {
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:focus {
-  border: 5px solid hsl(12, 29%, 77%);
+  border: 5px solid hsl(202, 100%, 50%);
   outline: none;
 }
 
@@ -708,13 +711,13 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
 .archiveContent a {
   text-decoration: none;
   font-family: dizhitl;
-  color: hsl(12, 29%, 77%);
+  color: hsl(202, 100%, 50%);
 }
 .archiveContent .partners a {
-  color: hsl(201, 100%, 35%);
+  color: hsl(12, 29%, 77%);
 }
 .archiveContent ul li:nth-child(-n+4) {
-  border-bottom: 2px solid hsl(12, 29%, 77%);
+  border-bottom: 2px solid hsl(202, 100%, 50%);
 }
 
 .archiveProjectTitle:after {
@@ -732,22 +735,22 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   padding-bottom: 1.5rem;
 }
 .eggy img {
-  box-shadow: 0px 10px 9px 0px rgb(0, 159, 253);
-  -webkit-box-shadow: 0px 10px 9px 0px rgb(0, 159, 253);
-  -moz-box-shadow: 0px 5px 10px 0px rgb(0, 159, 253);
+  box-shadow: 0px 10px 9px 0px hsl(12, 29%, 77%);
+  -webkit-box-shadow: 0px 10px 9px 0px hsl(12, 29%, 77%);
+  -moz-box-shadow: 0px 5px 10px 0px hsl(12, 29%, 77%);
 }
 .eggy img:hover, .eggy img:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  border: 5px solid #009ffd;
+  border: 5px solid hsl(12, 29%, 77%);
 }
 .eggy a {
-  color: #009ffd;
+  color: rgb(213, 185, 178);
 }
 .eggy i {
   font-size: clamp(1.375rem, 1.2rem + 0.875vw, 2.25rem);
-  color: #009ffd;
+  color: hsl(12, 29%, 77%);
 }
 
 .eggInfo {
@@ -820,15 +823,15 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
   .projectImage {
     width: 30vw;
     height: 18.5414091471vw;
-    box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -webkit-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -moz-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
   }
   .projectImage:hover, .projectImage:focus {
     border: none;
-    box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -webkit-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
-    -moz-box-shadow: -10px 5px 9px 0px rgba(73, 181, 23, 0.75);
+    box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -webkit-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
+    -moz-box-shadow: -10px 5px 9px 0px hsl(202, 100%, 50%);
   }
   .projectImage:after {
     display: none;
@@ -839,7 +842,7 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 2px solid hsl(12, 29%, 77%);
+    border-bottom: 2px solid hsl(202, 100%, 50%);
   }
   .projectInfo h3 {
     grid-row: 1;
@@ -1012,6 +1015,9 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, button:f
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
   }
+  .slide .projectImage:hover, .slide .projectImage:focus {
+    border: 5px solid hsl(202, 100%, 50%);
+  }
   .slide img {
     height: auto;
   }
@@ -1042,8 +1048,13 @@ footer p {
   text-align: center;
   font-size: clamp(2.25rem, 2.175rem + 0.375vw, 2.625rem);
   margin: 0 auto;
-  cursor: pointer;
   transition: all 1s;
+}
+.bottomT span {
+  cursor: pointer;
+}
+.bottomT span:hover, .bottomT span:focus {
+  color: hsl(202, 100%, 50%);
 }
 
 @media (min-width: 1023px) {
